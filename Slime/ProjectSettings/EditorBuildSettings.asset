@@ -9,8 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/TitleScene.unity
+    path: Assets/Hasui/Scene/TitleScene.unity
     guid: cf6ae318cdedcf04f94040430263853a
+  - enabled: 1
+    path: Assets/Hasui/Scene/StoryScene.unity
+    guid: c8220dfeeeafb7d4da0a6e5dd850d0ad
+  - enabled: 1
+    path: Assets/Hasui/Scene/CardEffectScene.unity
+    guid: 1b3bb91096d80c941a59995323f8592d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
