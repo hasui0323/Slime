@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class HEnterStart : MonoBehaviour
+public class HNextScene : MonoBehaviour
 {
     //次のシーン名
     public string nextSceneName;
@@ -9,8 +9,8 @@ public class HEnterStart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Enterキーが押された場合
-        if (Input.GetKeyDown(KeyCode.Return))
+        //Zキーが押された場合、指定のシーンへ
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             SceneManager.LoadScene(nextSceneName);
         }

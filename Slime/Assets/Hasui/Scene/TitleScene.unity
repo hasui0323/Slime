@@ -178,7 +178,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f66a8401e88523947984505f569c778e, type: 3}
+    m_Font: {fileID: 12800000, guid: 9b6a9ded4de3f2141a0930bda8ebba25, type: 3}
     m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
@@ -211,7 +211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a94a2a36b115f74cab58fb67359ed4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HExplanation
-  nextSceneName: CardEffectScene
 --- !u!1 &545503184
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +387,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f66a8401e88523947984505f569c778e, type: 3}
+    m_Font: {fileID: 12800000, guid: 9b6a9ded4de3f2141a0930bda8ebba25, type: 3}
     m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
@@ -468,7 +467,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f66a8401e88523947984505f569c778e, type: 3}
+    m_Font: {fileID: 12800000, guid: 9b6a9ded4de3f2141a0930bda8ebba25, type: 3}
     m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
@@ -480,7 +479,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Enter\u3067\u30B2\u30FC\u30E0\u958B\u59CB"
+  m_Text: "Z\u3067\u30B2\u30FC\u30E0\u958B\u59CB"
 --- !u!222 &838867772
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -498,10 +497,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 838867769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0643bc137979c24fb3ef323a37a61f4, type: 3}
+  m_Script: {fileID: 11500000, guid: fb9528a7e5c85fe468b2e207bf1ea340, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HEnterStart
-  nextSceneName: StoryScene
+  m_EditorClassIdentifier: Assembly-CSharp::HNextScene
+  nextSceneName: OperationScene
 --- !u!1 &1561053148
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,7 +866,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 13ce7f7460dff684e8417da9b58a0b68, type: 3}
+    m_Font: {fileID: 12800000, guid: 9b6a9ded4de3f2141a0930bda8ebba25, type: 3}
     m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0

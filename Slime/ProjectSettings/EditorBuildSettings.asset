@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Hasui/Scene/TitleScene.unity
     guid: cf6ae318cdedcf04f94040430263853a
   - enabled: 1
+    path: Assets/Hasui/Scene/OperationScene.unity
+    guid: 51f70c4dbf9e51347ba64c43b1580356
+  - enabled: 1
     path: Assets/Hasui/Scene/StoryScene.unity
     guid: c8220dfeeeafb7d4da0a6e5dd850d0ad
   - enabled: 1
