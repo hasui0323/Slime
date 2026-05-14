@@ -804,6 +804,13 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  stopAnime: FPlayerStop
+  moveAnime: FPlayerMove
+  jumpAnime: FPlayerJump
+  goalAnime: FPlayerGoal
+  deadAnime: FPlayerOver
+  nowAnime: 
+  oldAnime: 
 --- !u!58 &1905177230
 CircleCollider2D:
   m_ObjectHideFlags: 0

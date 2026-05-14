@@ -12,13 +12,15 @@ public class FPlayerController : MonoBehaviour
 
     //アニメーション対応
     Animator animator;     //アニメーター
-    public string stopAnime = "PlayerStop";
-    public string moveAnime = "PlayerMove";
-    public string jumpAnime = "PlayerJump";
-    public string goalAnime = "PlayerGoal";
-    public string deadAnime = "PlayerOver";
+    public string stopAnime = "FPlayerStop";
+    public string moveAnime = "FPlayerMove";
+    public string jumpAnime = "FPlayerJump";
+    public string goalAnime = "FPlayerGoal";
+    public string deadAnime = "FPlayerOver";
     public string nowAnime = "";
     public string oldAnime = "";
+
+    public static string gameState = "playing";//ゲームの状態
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,11 +29,18 @@ public class FPlayerController : MonoBehaviour
         animator = GetComponent<Animator>();        //Animatorを取ってくる
         nowAnime = stopAnime;                       //停止から開始する
         oldAnime = stopAnime;                       //停止から開始する
+
+        gameState = "playng";   //ゲーム中にする
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(gameState!="playing")
+        {
+            return;
+        }
+
         //水平方向の入力をチェックする
         axisH = Input.GetAxisRaw("Horizontal");
         //向きの調整
@@ -57,6 +66,11 @@ public class FPlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(gameState!="playing")
+        {
+            return;
+        }
+
         //地上判定
         bool onGround = Physics2D.CircleCast(transform.position,    //発射位置
                                             0.2f,                   //円の半径
@@ -82,7 +96,8 @@ public class FPlayerController : MonoBehaviour
         if(onGround)
         {
             //地面の上
-            if(axisH==0)
+            //if(axisH==0)
+            if (Mathf.Abs(axisH) < 0.1f)
             {
                 nowAnime = stopAnime;   //停止中
             }
@@ -99,7 +114,10 @@ public class FPlayerController : MonoBehaviour
         if(nowAnime !=oldAnime)
         {
             oldAnime = nowAnime;
-            animator.Play(nowAnime);    //アニメーション再生
+            animator.Play(nowAnime, 0, 0f);  //アニメーション再生
+
+
+            Debug.Log(nowAnime);
         }
     }
     //ジャンプ
