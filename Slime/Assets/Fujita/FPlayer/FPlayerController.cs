@@ -30,7 +30,7 @@ public class FPlayerController : MonoBehaviour
         nowAnime = stopAnime;                       //停止から開始する
         oldAnime = stopAnime;                       //停止から開始する
 
-        gameState = "playng";   //ゲーム中にする
+        gameState = "playing";   //ゲーム中にする
     }
 
     // Update is called once per frame
@@ -142,11 +142,30 @@ public class FPlayerController : MonoBehaviour
     public void Goal()
     {
         animator.Play(goalAnime);
+
+        gameState = "gameclear";
+        GameStop(); //ゲーム停止
     }
     //ゲームオーバー
     public void GameOver()
     {
         animator.Play(deadAnime);
-    }
 
+        gameState = "gameover";
+        //----------------------------
+        //ゲームオーバー演出
+        //----------------------------
+        //プレイヤーあたりを消す
+        GetComponent<CapsuleCollider2D>().enabled = false;
+        //プレイヤーを上に少しあげる演出
+        rbody.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
+    }
+    //ゲーム中
+    void GameStop()
+    {
+        //Rigidbody2Dを取ってくる
+        Rigidbody2D rbody = GetComponent<Rigidbody2D>();
+        //速度を0にして強制停止
+        rbody.linearVelocity = new Vector2(0, 0);
+    }
 }
