@@ -144,7 +144,7 @@ public class PreviewManager : MonoBehaviour
             previewImage11.enabled = false;
 
             previewText1.text = "";
-            previewText2.text = "Cキーダッシュのクールタイムが0秒になる(10秒)";
+            previewText2.text = "Cキーのダッシュのクールタイムが0秒になる(10秒)";
 
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage4.color = new Color(1, 1, 1, 1);
