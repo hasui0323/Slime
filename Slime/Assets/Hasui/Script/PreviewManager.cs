@@ -13,7 +13,6 @@ public class PreviewManager : MonoBehaviour
     public GameObject Button7;
     public GameObject Button8;
     public GameObject Button9;
-    public GameObject Button10;
 
     public Sprite Sprite1;
     public Sprite Sprite2;
@@ -26,7 +25,10 @@ public class PreviewManager : MonoBehaviour
     public Sprite Sprite9;
     public Sprite Sprite10;
     public Sprite Sprite11;
-  
+
+    public Text previewText1;
+    public Text previewText2;
+
 
     public Image previewImage1;
     public Image previewImage2;
@@ -53,6 +55,9 @@ public class PreviewManager : MonoBehaviour
         previewImage9.enabled = false;
         previewImage10.enabled = false;
         previewImage11.enabled = false;
+
+        previewText1.text = "";
+        previewText2.text = "";
 
         previewImage1.color = new Color(1, 1, 1, 0);
         previewImage2.color = new Color(1, 1, 1, 0);
@@ -90,6 +95,9 @@ public class PreviewManager : MonoBehaviour
             previewImage10.enabled = false;
             previewImage11.enabled = false;
 
+            previewText1.text = "";
+            previewText2.text = "足が速くなる(8秒)";
+
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage2.color = new Color(1, 1, 1, 1);
 
@@ -110,6 +118,9 @@ public class PreviewManager : MonoBehaviour
             previewImage9.enabled = false;
             previewImage10.enabled = false;
             previewImage11.enabled = false;
+
+            previewText1.text = "";
+            previewText2.text = "ハイジャンプができる(1回)";
 
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage3.color = new Color(1, 1, 1, 1);
@@ -132,15 +143,18 @@ public class PreviewManager : MonoBehaviour
             previewImage10.enabled = false;
             previewImage11.enabled = false;
 
+            previewText1.text = "";
+            previewText2.text = "Cキーダッシュのクールタイムが0秒になる(10秒)";
+
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage4.color = new Color(1, 1, 1, 1);
         }
         else if (current == Button4)
         {
-            previewImage1.sprite = Sprite1;
+            previewImage11.sprite = Sprite11;
             previewImage5.sprite = Sprite5;
 
-            previewImage1.enabled = true;
+            previewImage1.enabled = false;
             previewImage2.enabled = false;
             previewImage3.enabled = false;
             previewImage4.enabled = false;
@@ -150,17 +164,20 @@ public class PreviewManager : MonoBehaviour
             previewImage8.enabled = false;
             previewImage9.enabled = false;
             previewImage10.enabled = false;
-            previewImage11.enabled = false;
+            previewImage11.enabled = true;
 
-            previewImage1.color = new Color(1, 1, 1, 1);
+            previewText1.text = "敵を倒せる弾を撃つ(3回)";
+            previewText2.text = "";
+
+            previewImage11.color = new Color(1, 1, 1, 1);
             previewImage5.color = new Color(1, 1, 1, 1);
         }
         else if (current == Button5)
         {
-            previewImage1.sprite = Sprite1;
+            previewImage11.sprite = Sprite11;
             previewImage6.sprite = Sprite6;
 
-            previewImage1.enabled = true;
+            previewImage1.enabled = false;
             previewImage2.enabled = false;
             previewImage3.enabled = false;
             previewImage4.enabled = false;
@@ -170,9 +187,12 @@ public class PreviewManager : MonoBehaviour
             previewImage8.enabled = false;
             previewImage9.enabled = false;
             previewImage10.enabled = false;
-            previewImage11.enabled = false;
+            previewImage11.enabled = true;
 
-            previewImage1.color = new Color(1, 1, 1, 1);
+            previewText1.text = "オブジェクトを破壊できる(1回)";
+            previewText2.text = "";
+
+            previewImage11.color = new Color(1, 1, 1, 1);
             previewImage6.color = new Color(1, 1, 1, 1);
         }
         else if (current == Button6)
@@ -191,6 +211,9 @@ public class PreviewManager : MonoBehaviour
             previewImage9.enabled = false;
             previewImage10.enabled = false;
             previewImage11.enabled = false;
+
+            previewText1.text = "";
+            previewText2.text = "残機が増える(1機)";
 
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage7.color = new Color(1, 1, 1, 1);
@@ -212,15 +235,18 @@ public class PreviewManager : MonoBehaviour
             previewImage10.enabled = false;
             previewImage11.enabled = false;
 
+            previewText1.text = "";
+            previewText2.text = "敵やダメージオブジェクトに対して無敵\n（すり抜ける・１～２秒程度）\nスキル発動後、数秒減速する";
+
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage8.color = new Color(1, 1, 1, 1);
         }
         else if (current == Button8)
         {
-            previewImage1.sprite = Sprite1;
-            previewImage8.sprite = Sprite9;
+            previewImage11.sprite = Sprite11;
+            previewImage9.sprite = Sprite9;
 
-            previewImage1.enabled = true;
+            previewImage1.enabled = false;
             previewImage2.enabled = false;
             previewImage3.enabled = false;
             previewImage4.enabled = false;
@@ -230,17 +256,20 @@ public class PreviewManager : MonoBehaviour
             previewImage8.enabled = false;
             previewImage9.enabled = true;
             previewImage10.enabled = false;
-            previewImage11.enabled = false;
+            previewImage11.enabled = true;
 
-            previewImage1.color = new Color(1, 1, 1, 1);
+            previewText1.text = "天国と地獄\n（スタート時のみ出現・\n天国の場合永続で足が速くなる\n・地獄の場合即死）";
+            previewText2.text = "";
+
+            previewImage11.color = new Color(1, 1, 1, 1);
             previewImage9.color = new Color(1, 1, 1, 1);
         }
         else if (current == Button9)
         {
-            previewImage1.sprite = Sprite1;
             previewImage10.sprite = Sprite10;
+            previewImage11.sprite = Sprite11;
 
-            previewImage1.enabled = true;
+            previewImage1.enabled = false;
             previewImage2.enabled = false;
             previewImage3.enabled = false;
             previewImage4.enabled = false;
@@ -250,29 +279,12 @@ public class PreviewManager : MonoBehaviour
             previewImage8.enabled = false;
             previewImage9.enabled = false;
             previewImage10.enabled = true;
-            previewImage11.enabled = false;
-
-            previewImage1.color = new Color(1, 1, 1, 1);
-            previewImage10.color = new Color(1, 1, 1, 1);
-        }
-        else if (current == Button10)
-        {
-            previewImage1.sprite = Sprite1;
-            previewImage11.sprite = Sprite11;
-
-            previewImage1.enabled = true;
-            previewImage2.enabled = false;
-            previewImage3.enabled = false;
-            previewImage4.enabled = false;
-            previewImage5.enabled = false;
-            previewImage6.enabled = false;
-            previewImage7.enabled = false;
-            previewImage8.enabled = false;
-            previewImage9.enabled = false;
-            previewImage10.enabled = false;
             previewImage11.enabled = true;
 
-            previewImage1.color = new Color(1, 1, 1, 1);
+            previewText1.text = "スキルなし";
+            previewText2.text = "";
+
+            previewImage10.color = new Color(1, 1, 1, 1);
             previewImage11.color = new Color(1, 1, 1, 1);
         }
         else
@@ -288,6 +300,9 @@ public class PreviewManager : MonoBehaviour
             previewImage9.enabled = false;
             previewImage10.enabled = false;
             previewImage11.enabled = false;
+
+            previewText1.text = "";
+            previewText2.text = "";
         }
     }
 }
