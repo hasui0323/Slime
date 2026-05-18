@@ -10,6 +10,9 @@ public class FPlayerController : MonoBehaviour
     public LayerMask groundLayer;   //着地できるレイヤー
     bool goJump = false;            //ジャンプ開始フラグ
 
+    public float dashPower = 20f;   //ダッシュの強さ
+    bool isDashing = false;
+
     //アニメーション対応
     Animator animator;     //アニメーター
     public string stopAnime = "FPlayerStop";
@@ -19,6 +22,7 @@ public class FPlayerController : MonoBehaviour
     public string deadAnime = "FPlayerOver";
     public string nowAnime = "";
     public string oldAnime = "";
+    public string dashAnime = "FPlayerDash";
 
     public static string gameState = "playing";//ゲームの状態
 
@@ -41,6 +45,7 @@ public class FPlayerController : MonoBehaviour
             return;
         }
 
+        //------------------------------------------------
         //水平方向の入力をチェックする
         axisH = Input.GetAxisRaw("Horizontal");
         //向きの調整
@@ -62,7 +67,15 @@ public class FPlayerController : MonoBehaviour
         {
             Jump();
         }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Dash();
+
+            Debug.Log("aaa");
+        }
     }
+    //----------------------------------------------
 
     void FixedUpdate()
     {
@@ -80,8 +93,14 @@ public class FPlayerController : MonoBehaviour
 
         Debug.Log(onGround);
 
-        //プレイヤーの横の速さを変えている
-        rbody.linearVelocity = new Vector2(axisH * speed, rbody.linearVelocity.y);
+        ////プレイヤーの横の速さを変えている
+        //rbody.linearVelocity = new Vector2(axisH * speed, rbody.linearVelocity.y);
+
+        if (!isDashing)
+        {
+            rbody.linearVelocity =
+                new Vector2(axisH * speed, rbody.linearVelocity.y);
+        }
 
         if (onGround&&goJump)
         {
@@ -93,7 +112,14 @@ public class FPlayerController : MonoBehaviour
         }
 
         //アニメーション更新
-        if(onGround)
+
+        if (isDashing)
+        {
+            //ダッシュ中
+            nowAnime = dashAnime;
+        }
+
+        else if (onGround)
         {
             //地面の上
             //if(axisH==0)
@@ -120,11 +146,43 @@ public class FPlayerController : MonoBehaviour
             Debug.Log(nowAnime);
         }
     }
+
+    //----------------------------------------------
     //ジャンプ
     public void Jump()
     {
         goJump = true;  //ジャンプフラグを立てる
     }
+
+    //ダッシュ
+    public void Dash()
+    {
+        isDashing = true;
+
+        //ダッシュのアニメーションにすぐ切り替える
+        animator.Play(dashAnime, 0, 0f);
+
+        //今の速度を一回消す
+        rbody.linearVelocity = Vector2.zero;
+
+        ////向いている方向へ力を加える
+        float dir = Mathf.Sign(transform.localScale.x);
+
+        //ダッシュ
+        Vector2 dash = new Vector2(dir * dashPower, 0);
+
+        rbody.AddForce(dash, ForceMode2D.Impulse);
+
+        //少し後に解除
+        Invoke("EndDash", 0.2f);
+    }
+
+    void EndDash()
+    {
+        isDashing = false;
+    }
+
+    //---------------------------------------------
 
     //接触開始
     void OnTriggerEnter2D(Collider2D collision)
