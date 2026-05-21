@@ -35,9 +35,9 @@ public class HResultTime : MonoBehaviour
             resultText.text = "GAME OVER";
         }
             //ƒ‰ƒ“ƒLƒ“ƒO•\Ž¦
-            firstText.text = "1st : " + FormatTime(first);
-            secondText.text = "2nd : " + FormatTime(second);
-            thirdText.text = "3rd : " + FormatTime(third);
+            firstText.text = FormatTime(first);
+            secondText.text = FormatTime(second);
+            thirdText.text = FormatTime(third);
         
     }
 
