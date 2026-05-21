@@ -38,8 +38,8 @@ public class TimerManager : MonoBehaviour
 
         //‰æ–Ê‚É•\¦
         timerText.text =
-            minutes.ToString("00") + ":" +
-            seconds.ToString("00");
+            minutes.ToString("00") + "m" +
+            seconds.ToString("00") + "s";
     }
 
     //ƒS[ƒ‹‚µ‚½‚Æ‚«

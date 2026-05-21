@@ -170,7 +170,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: GAME OVER
 --- !u!222 &132721645
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -196,7 +196,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 259, y: 177}
-  m_SizeDelta: {x: 414.755, y: 97.924}
+  m_SizeDelta: {x: 610.398, y: 97.924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &377786725
 GameObject:
@@ -595,7 +595,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.8235294}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.8627451}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -981,8 +981,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000022888, y: 364}
-  m_SizeDelta: {x: 319.34, y: 103.031}
+  m_AnchoredPosition: {x: -0.00000071526, y: 362}
+  m_SizeDelta: {x: 321.592, y: 103.031}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1131837735
 MonoBehaviour:

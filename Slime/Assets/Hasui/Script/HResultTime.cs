@@ -73,7 +73,7 @@ public class HResultTime : MonoBehaviour
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time % 60);
 
-        return minutes.ToString("00") + ":" +
-               seconds.ToString("00");
+        return minutes.ToString("00") + "m" +
+               seconds.ToString("00") + "s";
     }
 }
