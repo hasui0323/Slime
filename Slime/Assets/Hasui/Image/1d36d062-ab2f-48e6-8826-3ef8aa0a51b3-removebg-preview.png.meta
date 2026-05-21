@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 64db7247c1d741f4ea91773fe5eb9d25
+guid: ba4a56bc8706e6c48b36bf8b8b9c8651
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2107432618566654123
-    second: DamageHeart_0
+      213: 1879511547100271370
+    second: 1d36d062-ab2f-48e6-8826-3ef8aa0a51b3-removebg-preview_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DamageHeart_0
+      name: 1d36d062-ab2f-48e6-8826-3ef8aa0a51b3-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 159
-        y: 239
-        width: 682
-        height: 642
+        x: 89
+        y: 52
+        width: 365
+        height: 343
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ba89cb90dca1f3d10800000000000000
-      internalID: 2107432618566654123
+      spriteID: a0318244bcd551a10800000000000000
+      internalID: 1879511547100271370
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DamageHeart_0: 2107432618566654123
+      1d36d062-ab2f-48e6-8826-3ef8aa0a51b3-removebg-preview_0: 1879511547100271370
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

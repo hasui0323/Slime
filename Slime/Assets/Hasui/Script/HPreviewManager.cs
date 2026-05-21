@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class PreviewManager : MonoBehaviour
+public class HPreviewManager : MonoBehaviour
 {
     public GameObject Button1;
     public GameObject Button2;
