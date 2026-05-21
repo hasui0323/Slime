@@ -210,13 +210,15 @@ public class FPlayerController : MonoBehaviour
         animator.Play(deadAnime);
 
         gameState = "gameover";
-        //----------------------------
-        //ゲームオーバー演出
-        //----------------------------
-        //プレイヤーあたりを消す
-        GetComponent<CapsuleCollider2D>().enabled = false;
-        //プレイヤーを上に少しあげる演出
-        rbody.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
+        GameStop(); //ゲーム停止
+        ////----------------------------
+        ////ゲームオーバー演出
+        ////----------------------------
+        ////プレイヤーあたりを消す
+        //GetComponent<CapsuleCollider2D>().enabled = false;
+        ////プレイヤーを上に少しあげる演出
+        //rbody.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
+
     }
     //ゲーム中
     void GameStop()

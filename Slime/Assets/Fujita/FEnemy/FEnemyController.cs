@@ -13,11 +13,15 @@ public class FEnemyController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(isToRight)
+        if (isToRight)
         {
-            transform.localScale = new Vector2(-1, 1);//向きの変更
+            transform.localScale = new Vector2(-0.15f, 0.15f);
         }
-        
+        //else
+        //{
+        //    transform.localScale = new Vector2(-0.15f, 0.15f);
+        //}
+
     }
 
     // Update is called once per frame
@@ -32,11 +36,11 @@ public class FEnemyController : MonoBehaviour
                 time = 0;                   //タイマーを初期化
                 if(isToRight)
                 {
-                    transform.localScale = new Vector2(-1,1);   //向きの変更
+                    transform.localScale = new Vector2(-0.15f,0.15f);   //向きの変更
                 }
                 else
                 {
-                    transform.localScale = new Vector2(1, 1);   //向きの変更
+                    transform.localScale = new Vector2(0.15f, 0.15f);   //向きの変更
                 }
             }
         }
@@ -69,15 +73,18 @@ public class FEnemyController : MonoBehaviour
     //接触
     private void OnTriggerEnter2D(Collider2D collision)
     {
+            Debug.Log("当たった");
+
         isToRight = !isToRight;     //フラグを反転させる
         time = 0;                   //タイマーを初期化
+
         if(isToRight)
         {
-            transform.localScale = new Vector2(1, 1);//向きの変更
+            transform.localScale = new Vector2(0.15f, 0.15f);//向きの変更
         }
         else
         {
-            transform.localScale = new Vector2(-1, 1);//向きの変更
+            transform.localScale = new Vector2(-0.15f, 0.15f);//向きの変更
         }
     }
 
