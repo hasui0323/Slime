@@ -8,6 +8,9 @@ public class TimerManager : MonoBehaviour
     //ResultScene用
     public static float clearTime;
 
+    //クリア判定
+    public static bool isClear;
+
     //表示用
     public Text timerText;
 
@@ -15,15 +18,19 @@ public class TimerManager : MonoBehaviour
 
     //タイマーストップ用フラグ
     private bool isRunning = true;
+    void Start()
+    {
+        //クリア判定初期化
+        isClear = false;
+    }
 
     void Update()
     {
-        if(isRunning)
+        if (isRunning)
         {
             //時間を加算
             timer += Time.deltaTime;
         }
-       
 
         //分と秒
         int minutes = Mathf.FloorToInt(timer / 60);
@@ -38,22 +45,40 @@ public class TimerManager : MonoBehaviour
     //ゴールしたとき
     public void Goal()
     {
+        Debug.Log("Goal");
+
+        //タイマーストップ
         isRunning = false;
 
-        //ResultSceneへ値を渡す
+        //クリア判定
+        isClear = true;
+
+        //タイム保存
         clearTime = timer;
 
-        new WaitForSeconds(3f);
-        // 3秒待ってからシーン移動
+        StartCoroutine(LoadResultScene());
+    }
+
+    //死亡したとき
+    public void Dead()
+    {
+        Debug.Log("Dead");
+
+        //タイマーストップ
+        isRunning = false;
+
+        //死亡判定
+        isClear = false;
+
         StartCoroutine(LoadResultScene());
     }
 
     IEnumerator LoadResultScene()
     {
-        // 3秒待機
+        //三秒間その画面でとどまる
         yield return new WaitForSeconds(3f);
 
-        // シーン移動
+        //リザルトシーン移動
         SceneManager.LoadScene("ResultScene");
     }
 }
