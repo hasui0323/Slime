@@ -9,6 +9,9 @@ public class HResultTime : MonoBehaviour
     public Text secondText;
     public Text thirdText;
 
+    //New Record Text表示用
+    public Text NewrecordText;
+
     //ランキング保存用
     static float first = 9999f;
     static float second = 9999f;
@@ -16,6 +19,8 @@ public class HResultTime : MonoBehaviour
 
     void Start()
     {
+        //常に表示しないため
+        NewrecordText.gameObject.SetActive(false);
 
         if (TimerManager.isClear)
         {
@@ -49,6 +54,10 @@ public class HResultTime : MonoBehaviour
             third = second;
             second = first;
             first = newTime;
+
+            //New Record表示用
+            NewrecordText.gameObject.SetActive(true);
+            NewrecordText.text = "NEW RECORD";
         }
         //2位更新
         else if (newTime < second)

@@ -236,7 +236,7 @@ public class HPreviewManager : MonoBehaviour
             previewImage11.enabled = false;
 
             previewText1.text = "";
-            previewText2.text = "敵やダメージオブジェクトに対して無敵\n（すり抜ける・１～２秒程度）\nスキル発動後、数秒減速する";
+            previewText2.text = "敵やダメージオブジェクトに対して無敵\n（すり抜ける・２秒）\nスキル発動後、数秒減速する";
 
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage8.color = new Color(1, 1, 1, 1);
