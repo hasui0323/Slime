@@ -17,6 +17,9 @@ public class HResultTime : MonoBehaviour
     static float second = 9999f;
     static float third = 9999f;
 
+    //ゲーミング表示ON/OFF
+    bool isNewRecord = false;
+
     void Start()
     {
         //常に表示しないため
@@ -46,6 +49,19 @@ public class HResultTime : MonoBehaviour
         
     }
 
+    void Update()
+    {
+        //NewRecordTextだけ動かす
+        if (isNewRecord)
+        {
+            //NewRecordTextを虹色にする
+            NewrecordText.color = Color.HSVToRGB(Time.time % 1, 1, 1);
+
+            //NewRecordTextを拡大・縮小
+            NewrecordText.transform.localScale = Vector3.one * (1 + Mathf.Sin(Time.time * 5) * 0.2f);
+        }
+    }
+
     void UpdateRanking(float newTime)
     {
         //1位更新
@@ -58,6 +74,10 @@ public class HResultTime : MonoBehaviour
             //New Record表示用
             NewrecordText.gameObject.SetActive(true);
             NewrecordText.text = "NEW RECORD";
+
+            //Textをゲーミング仕様に変更
+            isNewRecord = true;
+
         }
         //2位更新
         else if (newTime < second)

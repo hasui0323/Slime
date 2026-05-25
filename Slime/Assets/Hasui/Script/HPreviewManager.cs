@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering.RenderGraphModule;
 
 public class HPreviewManager : MonoBehaviour
 {
@@ -95,8 +96,10 @@ public class HPreviewManager : MonoBehaviour
             previewImage10.enabled = false;
             previewImage11.enabled = false;
 
+            //テキストサイズ変更
+            previewText2.fontSize = 70;
             previewText1.text = "";
-            previewText2.text = "足が速くなる(8秒)";
+            previewText2.text = "足が速くなる\n(8秒)";
 
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage2.color = new Color(1, 1, 1, 1);
@@ -119,8 +122,10 @@ public class HPreviewManager : MonoBehaviour
             previewImage10.enabled = false;
             previewImage11.enabled = false;
 
+            //テキストサイズ変更
+            previewText2.fontSize = 70;
             previewText1.text = "";
-            previewText2.text = "ハイジャンプができる(1回)";
+            previewText2.text = "ハイジャンプができる\n(1回)";
 
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage3.color = new Color(1, 1, 1, 1);
@@ -143,8 +148,10 @@ public class HPreviewManager : MonoBehaviour
             previewImage10.enabled = false;
             previewImage11.enabled = false;
 
+            //テキストサイズ変更
+            previewText2.fontSize = 70;
             previewText1.text = "";
-            previewText2.text = "Cキーのダッシュのクールタイムが0秒になる(10秒)";
+            previewText2.text = "Cキーのダッシュのクールタイムが\n0秒になる(10秒)";
 
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage4.color = new Color(1, 1, 1, 1);
@@ -166,7 +173,9 @@ public class HPreviewManager : MonoBehaviour
             previewImage10.enabled = false;
             previewImage11.enabled = true;
 
-            previewText1.text = "敵を倒せる弾を撃つ(3回)";
+            //テキストサイズ変更
+            previewText1.fontSize = 70;
+            previewText1.text = "敵を倒せる弾を撃つ\n(3回)";
             previewText2.text = "";
 
             previewImage11.color = new Color(1, 1, 1, 1);
@@ -189,7 +198,9 @@ public class HPreviewManager : MonoBehaviour
             previewImage10.enabled = false;
             previewImage11.enabled = true;
 
-            previewText1.text = "オブジェクトを破壊できる(1回)";
+            //テキストサイズ変更
+            previewText1.fontSize = 70;
+            previewText1.text = "オブジェクトを破壊できる\n(1回)";
             previewText2.text = "";
 
             previewImage11.color = new Color(1, 1, 1, 1);
@@ -212,8 +223,10 @@ public class HPreviewManager : MonoBehaviour
             previewImage10.enabled = false;
             previewImage11.enabled = false;
 
+            //テキストサイズ変更
+            previewText2.fontSize = 70;
             previewText1.text = "";
-            previewText2.text = "残機が増える(1機)";
+            previewText2.text = "残機が増える\n(1機)";
 
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage7.color = new Color(1, 1, 1, 1);
@@ -235,8 +248,10 @@ public class HPreviewManager : MonoBehaviour
             previewImage10.enabled = false;
             previewImage11.enabled = false;
 
+            //テキストサイズ変更
+            previewText2.fontSize = 60;
             previewText1.text = "";
-            previewText2.text = "敵やダメージオブジェクトに対して無敵\n（すり抜ける・２秒）\nスキル発動後、数秒減速する";
+            previewText2.text = "敵やダメージオブジェクトに対して無敵\n（オブジェクトをすり抜ける・２秒）";
 
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage8.color = new Color(1, 1, 1, 1);
@@ -258,6 +273,8 @@ public class HPreviewManager : MonoBehaviour
             previewImage10.enabled = false;
             previewImage11.enabled = true;
 
+            //テキストサイズ変更
+            previewText1.fontSize = 65;
             previewText1.text = "天国と地獄\n（スタート時のみ出現・\n天国の場合永続で足が速くなる\n・地獄の場合即死）";
             previewText2.text = "";
 
@@ -281,6 +298,8 @@ public class HPreviewManager : MonoBehaviour
             previewImage10.enabled = true;
             previewImage11.enabled = true;
 
+            //テキストサイズ変更
+            previewText1.fontSize = 70;
             previewText1.text = "スキルなし";
             previewText2.text = "";
 
