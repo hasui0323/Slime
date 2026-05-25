@@ -13,6 +13,12 @@ public class FPlayerController : MonoBehaviour
     public float dashPower = 20f;   //ダッシュの強さ
     bool isDashing = false;
 
+    // アイテム能力
+    public bool hasBullet = false;
+    public bool hasHammer = false;
+    public bool hasJump = false;
+
+
     //アニメーション対応
     Animator animator;     //アニメーター
     public string stopAnime = "FPlayerStop";
@@ -73,6 +79,15 @@ public class FPlayerController : MonoBehaviour
             Dash();
 
             Debug.Log("aaa");
+        }
+
+        // 弾アイテムを持っている時
+        if (hasBullet)
+        {
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                Debug.Log("弾を撃つ！");
+            }
         }
     }
     //----------------------------------------------
