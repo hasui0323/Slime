@@ -532,9 +532,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205cdbe15c9c8e64183e0e6e5bbc7e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDeadImage
-  targetImage: {fileID: 0}
-  normalSprite: {fileID: 0}
-  deadSprite: {fileID: 0}
+  targetImage: {fileID: 1117748949}
+  normalSprite: {fileID: -1571218341048295798, guid: 5e63154b4a13a254b9234e25142bf5f5, type: 3}
+  deadSprite: {fileID: 1879511547100271370, guid: ba4a56bc8706e6c48b36bf8b8b9c8651, type: 3}
 --- !u!1 &636979665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,10 +1192,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FCameraManager
   leftLimit: 0
-  rightLimit: 0
+  rightLimit: 15
   topLimit: 0
   bottomLimit: 0
-  subScreen: {fileID: 0}
+  subScreen: {fileID: 974831331}
 --- !u!1 &1117748948
 GameObject:
   m_ObjectHideFlags: 0
