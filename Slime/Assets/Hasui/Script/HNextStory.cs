@@ -7,10 +7,12 @@ public class HNextStory : MonoBehaviour
     public CanvasGroup StoryImage1;
     public CanvasGroup StoryImage2;
     public CanvasGroup StoryImage3;
+    public CanvasGroup StoryImage4;
 
     public Text StoryText1;
     public Text StoryText2;
     public Text StoryText3;
+    public Text StoryText4;
 
     public Text Text;
 
@@ -28,12 +30,14 @@ public class HNextStory : MonoBehaviour
         //2枚目以降透過
         StoryImage2.alpha = 0;
         StoryImage3.alpha = 0;
+        StoryImage4.alpha = 0;
 
         //一つ目のテキスト表示
         StoryText1.enabled = true;
         //2つ目以降非表示
         StoryText2.enabled = false;
         StoryText3.enabled = false;
+        StoryText4.enabled = false;
 
         Text.text = "Zで次へ・Xでスキップ";
 
@@ -57,12 +61,18 @@ public class HNextStory : MonoBehaviour
             if (cnt == 2)
             {
                 StartCoroutine(Fade(StoryImage2, StoryImage3));
-                Text.text = "Zでゲームスタート";
                 StoryText2.enabled = false;
                 StoryText3.enabled = true;
             }
+            if(cnt == 3)
+            {
+                StartCoroutine(Fade(StoryImage3, StoryImage4));
+                Text.text = "Zでゲームスタート";
+                StoryText3.enabled = false;
+                StoryText4.enabled = true;
+            }
         }
-        if (cnt == 3)
+        if (cnt == 4)
         {
             if (Input.GetKeyDown(KeyCode.Z))
             {
