@@ -13,11 +13,18 @@ public class FPlayerController : MonoBehaviour
     public float dashPower = 20f;   //ダッシュの強さ
     bool isDashing = false;
 
-    // アイテム能力
+    // アイテム能力--------------------------------------------
     public bool hasBullet = false;
     public bool hasHammer = false;
+    public bool hasHeart = false;
+    public bool hasHeaven = false;
+    public bool hasInvincibl = false;
     public bool hasJump = false;
+    public bool hasNoSkill = false;
+    public bool hasShoes = false;
+    public bool hasTimeReset = false;
 
+    //------------------------------------------------
 
     //アニメーション対応
     Animator animator;     //アニメーター
@@ -81,6 +88,8 @@ public class FPlayerController : MonoBehaviour
             Debug.Log("aaa");
         }
 
+        //アイテム所持時の動き--------------------------------------------------------
+
         // 弾アイテムを持っている時
         if (hasBullet)
         {
@@ -90,7 +99,7 @@ public class FPlayerController : MonoBehaviour
             }
         }
     }
-    //----------------------------------------------
+    //--------------------------------------------------------------------------------
 
     void FixedUpdate()
     {
