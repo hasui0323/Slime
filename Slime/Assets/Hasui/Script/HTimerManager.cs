@@ -13,33 +13,85 @@ public class TimerManager : MonoBehaviour
 
     //表示用
     public Text timerText;
+    public Text startText;
+
+    //BoxCollider
+    private BoxCollider boxCollider;
 
     private float timer;
 
     //タイマーストップ用フラグ
-    private bool isRunning = true;
+    private bool isRunning = false;
+
+    //カウントダウン表示用
+    private int countdown = 3;
+
+    //プレイヤー停止用
+    public FPlayerController playerController;
+
     void Start()
     {
         //クリア判定初期化
         isClear = false;
+
+        //タイマーテキスト非表示
+        timerText.enabled = false;
+
+        //プレイヤー停止
+        playerController.enabled = false;
+
+        //カウントダウン開始
+        StartCoroutine(StartCountdown());
     }
 
     void Update()
     {
+        //タイマー動作中
         if (isRunning)
         {
             //時間を加算
             timer += Time.deltaTime;
+
+            //分と秒
+            int minutes = Mathf.FloorToInt(timer / 60);
+            int seconds = Mathf.FloorToInt(timer % 60);
+
+            //画面に表示
+            timerText.text =
+                minutes.ToString("00") + "m" +
+                seconds.ToString("00") + "s";
+        }
+    }
+
+    //カウントダウン処理
+    IEnumerator StartCountdown()
+    {
+        while (countdown > 0)
+        {
+            //3 → 2 → 1 を表示
+            startText.text = countdown.ToString();
+
+            yield return new WaitForSeconds(1f);
+
+            countdown--;
         }
 
-        //分と秒
-        int minutes = Mathf.FloorToInt(timer / 60);
-        int seconds = Mathf.FloorToInt(timer % 60);
+        //START表示
+        startText.text = "START!";
 
-        //画面に表示
-        timerText.text =
-            minutes.ToString("00") + "m" +
-            seconds.ToString("00") + "s";
+        yield return new WaitForSeconds(1f);
+
+        //START文字を消す
+        startText.text = "";
+
+        //タイマー表示
+        timerText.enabled = true;
+
+        //プレイヤーを動かせるように
+        playerController.enabled = true;
+
+        //タイマースタート
+        isRunning = true;
     }
 
     //ゴールしたとき
@@ -47,13 +99,10 @@ public class TimerManager : MonoBehaviour
     {
         Debug.Log("Goal");
 
-        //タイマーストップ
         isRunning = false;
 
-        //クリア判定
         isClear = true;
 
-        //タイム保存
         clearTime = timer;
 
         StartCoroutine(LoadResultScene());
@@ -64,10 +113,8 @@ public class TimerManager : MonoBehaviour
     {
         Debug.Log("Dead");
 
-        //タイマーストップ
         isRunning = false;
 
-        //死亡判定
         isClear = false;
 
         StartCoroutine(LoadResultScene());
@@ -75,10 +122,8 @@ public class TimerManager : MonoBehaviour
 
     IEnumerator LoadResultScene()
     {
-        //三秒間その画面でとどまる
         yield return new WaitForSeconds(3f);
 
-        //リザルトシーン移動
         SceneManager.LoadScene("ResultScene");
     }
 }

@@ -119,6 +119,85 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &223398852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 223398853}
+  - component: {fileID: 223398855}
+  - component: {fileID: 223398854}
+  m_Layer: 5
+  m_Name: 'StartTimerText '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &223398853
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223398852}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 430991195}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000015259, y: 0.000005722}
+  m_SizeDelta: {x: 709.62, y: 203.86}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &223398854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223398852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 9b6a9ded4de3f2141a0930bda8ebba25, type: 3}
+    m_FontSize: 120
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 120
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &223398855
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223398852}
+  m_CullTransparentMesh: 1
 --- !u!1 &430991194
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,6 +231,7 @@ RectTransform:
   m_Children:
   - {fileID: 1117748951}
   - {fileID: 695940146}
+  - {fileID: 223398853}
   - {fileID: 1840303736}
   - {fileID: 1625911659}
   m_Father: {fileID: 0}
@@ -286,6 +366,15 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   dashPower: 20
+  hasBullet: 0
+  hasHammer: 0
+  hasHeart: 0
+  hasHeaven: 0
+  hasInvincibl: 0
+  hasJump: 0
+  hasNoSkill: 0
+  hasShoes: 0
+  hasTimeReset: 0
   stopAnime: FPlayerStop
   moveAnime: FPlayerMove
   jumpAnime: FPlayerJump
@@ -443,9 +532,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205cdbe15c9c8e64183e0e6e5bbc7e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDeadImage
-  targetImage: {fileID: 1117748949}
-  normalSprite: {fileID: -1571218341048295798, guid: 5e63154b4a13a254b9234e25142bf5f5, type: 3}
-  deadSprite: {fileID: 1879511547100271370, guid: ba4a56bc8706e6c48b36bf8b8b9c8651, type: 3}
+  targetImage: {fileID: 0}
+  normalSprite: {fileID: 0}
+  deadSprite: {fileID: 0}
 --- !u!1 &636979665
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,11 +619,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 9b6a9ded4de3f2141a0930bda8ebba25, type: 3}
-    m_FontSize: 70
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 5
-    m_MaxSize: 70
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -566,8 +655,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 616.22, y: 398.215}
-  m_SizeDelta: {x: 367.56, y: 103.853}
+  m_AnchoredPosition: {x: 597.19684, y: 398.215}
+  m_SizeDelta: {x: 405.606, y: 103.853}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &945791156
 GameObject:
@@ -1103,10 +1192,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FCameraManager
   leftLimit: 0
-  rightLimit: 11
+  rightLimit: 0
   topLimit: 0
   bottomLimit: 0
-  subScreen: {fileID: 974831331}
+  subScreen: {fileID: 0}
 --- !u!1 &1117748948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,8 +1268,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -692.25995, y: 357.45792}
-  m_SizeDelta: {x: 59.6503, y: 60.8547}
+  m_AnchoredPosition: {x: -703.5756, y: 368.01923}
+  m_SizeDelta: {x: 49.721, y: 51.587}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1248088593
 GameObject:
@@ -1212,6 +1301,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimerManager
   timerText: {fileID: 695940144}
+  startText: {fileID: 223398854}
+  playerController: {fileID: 504793687}
 --- !u!224 &1248088595
 RectTransform:
   m_ObjectHideFlags: 0
