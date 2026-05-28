@@ -98,6 +98,15 @@ public class FPlayerController : MonoBehaviour
                 Debug.Log("弾を撃つ！");
             }
         }
+        //ハンマーアイテムを持っている時
+        if (hasHammer)
+        {
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                Debug.Log("弾を撃つ！");
+            }
+        }
+
     }
     //--------------------------------------------------------------------------------
 

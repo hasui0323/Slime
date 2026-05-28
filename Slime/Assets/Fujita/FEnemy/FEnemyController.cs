@@ -73,7 +73,21 @@ public class FEnemyController : MonoBehaviour
     //接触
     private void OnTriggerEnter2D(Collider2D collision)
     {
-            Debug.Log("当たった");
+        //弾に当たった時用の処理
+        if (collision.gameObject.tag == "Bullet")
+        {
+            //弾を消す
+            Destroy(collision.gameObject);
+
+            //敵を消す
+            Destroy(gameObject);
+
+            return;
+        }
+
+        //壁などに当たった時は反転-----------------------
+
+        Debug.Log("当たった");
 
         isToRight = !isToRight;     //フラグを反転させる
         time = 0;                   //タイマーを初期化
