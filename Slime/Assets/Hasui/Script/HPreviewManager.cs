@@ -125,7 +125,7 @@ public class HPreviewManager : MonoBehaviour
             //テキストサイズ変更
             previewText2.fontSize = 70;
             previewText1.text = "";
-            previewText2.text = "ハイジャンプができる\n(1回)";
+            previewText2.text = "ハイジャンプができる\n(空中でも使用可能・1回)";
 
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage3.color = new Color(1, 1, 1, 1);
