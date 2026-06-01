@@ -28,6 +28,13 @@ public class FBulletShot : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.X))
             {
                 ShotBullet();
+
+                player.BulletCount--;
+
+                if (player.BulletCount <= 0)
+                {
+                    player.hasBullet = false;
+                }
             }
         }
 
@@ -38,6 +45,13 @@ public class FBulletShot : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.X))
             {
                 ShotHammer();
+
+                player.HammerCount--;
+
+                if (player.HammerCount <= 0)
+                {
+                    player.hasHammer = false;
+                }
             }
         }
     }

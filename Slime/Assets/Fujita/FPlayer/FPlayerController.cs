@@ -24,6 +24,17 @@ public class FPlayerController : MonoBehaviour
     public bool hasShoes = false;
     public bool hasTimeReset = false;
 
+    //アイテム回数--------------------------------------------
+    public int BulletCount = 0;
+    public int HammerCount = 0;
+    public int HeartCount = 0;
+    public int HeavenCount = 0;
+    public int InvinciblCount = 0;
+    public int JumpCount = 0;
+    public int NoSkillCount = 0;
+    public int ShoesCount = 0;
+    public int TimeResetCount = 0;
+
     //------------------------------------------------
 
     //アニメーション対応

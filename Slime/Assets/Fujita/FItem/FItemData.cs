@@ -44,46 +44,55 @@ public class FItemData : MonoBehaviour
             if(type==ItemType.Bullet)
             {
                 player.hasBullet = true;
+                player.BulletCount = 3;
             }
-            //
+            //ÉnÉìÉ}Å[
             if (type == ItemType.Hammer)
             {
                 player.hasHammer = true;
+                player.HammerCount = 1;
             }
 
             if (type == ItemType.Heart)
             {
                 player.hasHeart = true;
+                player.HeartCount = 1;
             }
 
             if (type == ItemType.Heaven)
             {
                 player.hasHeaven = true;
+                player.HeavenCount = 1;
             }
 
             if (type == ItemType.Invincibl)
             {
                 player.hasInvincibl = true;
+                player.InvinciblCount = 1;
             }
 
             if (type == ItemType.Jump)
             {
                 player.hasJump = true;
+                player.JumpCount = 1;
             }
 
             if (type == ItemType.NoSkill)
             {
                 player.hasNoSkill = true;
+                player.NoSkillCount = 1;
             }
             
             if (type == ItemType.Shoes)
             {
                 player.hasShoes = true;
+                player.ShoesCount = 1;
             }
 
             if (type == ItemType.TimeReset)
             {
                 player.hasTimeReset = true;
+                player.TimeResetCount = 1;
             }
 
             //----------------------------------------------------
