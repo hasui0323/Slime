@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemUI : MonoBehaviour
+public class HItemUI : MonoBehaviour
 {
     public Image itemImage;
 

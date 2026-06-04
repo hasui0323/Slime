@@ -19,10 +19,13 @@ public class FItemData : MonoBehaviour
     public int value = 0;       //®”’l‚ğİ’è‚Å‚«‚é
     public ItemType type;
 
+    //ItemUI—p
+    HItemUI ItemUI;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        ItemUI = FindFirstObjectByType<HItemUI>();
     }
 
     // Update is called once per frame
@@ -94,6 +97,8 @@ public class FItemData : MonoBehaviour
                 player.hasTimeReset = true;
                 player.TimeResetCount = 1;
             }
+
+            ItemUI.SetItem(type);
 
             //----------------------------------------------------
         }

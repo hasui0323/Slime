@@ -11,11 +11,17 @@ public class FBulletShot : MonoBehaviour
     public float bulletSpeed = 10.0f;
     public float hammerSpeed = 10.0f;
 
+    public HItemUI ItemUI;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //同じオブジェクトのPlayerController取得
         player = GetComponent<FPlayerController>();
+
+        ItemUI = FindFirstObjectByType<HItemUI>();
+
+        Debug.Log(ItemUI);
     }
 
     // Update is called once per frame
@@ -34,6 +40,7 @@ public class FBulletShot : MonoBehaviour
                 if (player.BulletCount <= 0)
                 {
                     player.hasBullet = false;
+                    ItemUI.ClearItem();
                 }
             }
         }
@@ -51,6 +58,8 @@ public class FBulletShot : MonoBehaviour
                 if (player.HammerCount <= 0)
                 {
                     player.hasHammer = false;
+
+                    ItemUI.ClearItem();
                 }
             }
         }
