@@ -15,12 +15,12 @@ public class FEnemyController : MonoBehaviour
     {
         if (isToRight)
         {
+            transform.localScale = new Vector2(0.15f, 0.15f);
+        }
+        else
+        {
             transform.localScale = new Vector2(-0.15f, 0.15f);
         }
-        //else
-        //{
-        //    transform.localScale = new Vector2(-0.15f, 0.15f);
-        //}
 
     }
 
