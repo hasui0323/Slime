@@ -186,7 +186,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.74509805}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.8627451}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -244,8 +244,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -378, y: 228}
-  m_SizeDelta: {x: 552.305, y: 84.898}
+  m_AnchoredPosition: {x: -371.3501, y: 228}
+  m_SizeDelta: {x: 565.605, y: 84.898}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &660402316
 MonoBehaviour:
@@ -1386,7 +1386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9528a7e5c85fe468b2e207bf1ea340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HNextScene
-  nextSceneName: StoryScene
+  nextSceneName: OperationScene2
 --- !u!1 &1841408500
 GameObject:
   m_ObjectHideFlags: 0
