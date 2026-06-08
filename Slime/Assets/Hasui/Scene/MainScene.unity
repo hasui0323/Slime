@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 275826823}
   - component: {fileID: 275826822}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Card Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1394,6 +1394,7 @@ GameObject:
   - component: {fileID: 1004997979}
   - component: {fileID: 1004997978}
   - component: {fileID: 1004997977}
+  - component: {fileID: 1004997985}
   m_Layer: 0
   m_Name: "\u4E3B\u4EBA\u516C\u30B9\u30E9\u30A4\u30E0\u9759\u6B62_0"
   m_TagString: Player
@@ -1448,6 +1449,7 @@ MonoBehaviour:
   shotPos: {fileID: 1004997976}
   bulletSpeed: 10
   hammerSpeed: 10
+  ItemUI: {fileID: 0}
 --- !u!95 &1004997979
 Animator:
   serializedVersion: 7
@@ -1682,6 +1684,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1004997985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004997975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205cdbe15c9c8e64183e0e6e5bbc7e24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HPlayerDeadImage
+  targetImage: {fileID: 1117748949}
+  normalSprite: {fileID: -1571218341048295798, guid: 5e63154b4a13a254b9234e25142bf5f5, type: 3}
+  deadSprite: {fileID: 1879511547100271370, guid: ba4a56bc8706e6c48b36bf8b8b9c8651, type: 3}
 --- !u!1 &1078151288
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,7 +2230,7 @@ GameObject:
   - component: {fileID: 1813288887}
   - component: {fileID: 1813288886}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Wall Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3001,13 +3018,13 @@ SceneRoots:
   - {fileID: 1813288888}
   - {fileID: 1668625828}
   - {fileID: 945791160}
+  - {fileID: 155894394}
   - {fileID: 1825302417}
   - {fileID: 1881692280}
-  - {fileID: 155894394}
   - {fileID: 2062812613}
   - {fileID: 589913109}
   - {fileID: 401028443}
   - {fileID: 756161709}
+  - {fileID: 491956950}
   - {fileID: 2066187767}
   - {fileID: 636979667}
-  - {fileID: 491956950}
