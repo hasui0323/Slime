@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 73084893-3939-4c59-b816-b61376acecac (1)_0
+      name: road_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 402
-        width: 1725
+        x: 28
+        y: 400
+        width: 1720
         height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -113,10 +113,32 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1a96698b3902a9340800000000000000
-      internalID: 4871241765783759265
+      spriteID: 68c32738f911d694aaadd47588227346
+      internalID: -1846684477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: road_3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 400
+        width: 410
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae41ca136fd33564cbd1386a0c565ae4
+      internalID: 492734872
       vertices: []
       indices: 
       edges: []
@@ -133,9 +155,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":443.0,"y":887.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: False
     nameFileIdTable:
-      73084893-3939-4c59-b816-b61376acecac (1)_0: 4871241765783759265
+      road_0: -1846684477
+      road_1: -1862494970
+      road_2: 436457888
+      road_3: 492734872
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
