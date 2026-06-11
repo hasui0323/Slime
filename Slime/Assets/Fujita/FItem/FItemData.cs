@@ -3,8 +3,6 @@ using UnityEngine;
 //ƒAƒCƒeƒ€‚ÌŽí—Þ
 public enum ItemType
 {
-    RandomCard,
-
     Bullet,
     Hammer,
     Heart,
@@ -14,6 +12,8 @@ public enum ItemType
     NoSkill,
     Shoes,
     TimeReset,
+
+    RandomCard,
 }
 
 public class FItemData : MonoBehaviour

@@ -512,7 +512,7 @@ MonoBehaviour:
   StoryText3: {fileID: 1419891618}
   StoryText4: {fileID: 385396049}
   Text: {fileID: 391744015}
-  nextSceneName: MainScene
+  nextSceneName: RandmCardScene
 --- !u!4 &844764668
 Transform:
   m_ObjectHideFlags: 0
