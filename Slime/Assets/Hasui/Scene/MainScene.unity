@@ -853,11 +853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5641574954490592734, guid: 63aede681f5b7034f9fdbeeff4d31e0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.058674
+      value: -14.16
       objectReference: {fileID: 0}
     - target: {fileID: 5641574954490592734, guid: 63aede681f5b7034f9fdbeeff4d31e0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.7580705
+      value: -0.85
       objectReference: {fileID: 0}
     - target: {fileID: 5641574954490592734, guid: 63aede681f5b7034f9fdbeeff4d31e0d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3926,6 +3926,7 @@ GameObject:
   - component: {fileID: 1813288888}
   - component: {fileID: 1813288887}
   - component: {fileID: 1813288886}
+  - component: {fileID: 1813288889}
   m_Layer: 0
   m_Name: Wall Collider
   m_TagString: Untagged
@@ -4040,6 +4041,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1813288889
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813288885}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 81.03497, y: 8.675767}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 188.92316, y: 3.223051}
+  m_EdgeRadius: 0
 --- !u!1 &1825302414
 GameObject:
   m_ObjectHideFlags: 0
@@ -4602,7 +4649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: life
-      value: 1
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: hasJump
@@ -4963,11 +5010,11 @@ SceneRoots:
   - {fileID: 982432513}
   - {fileID: 401028443}
   - {fileID: 756161709}
-  - {fileID: 491956950}
-  - {fileID: 2066187767}
-  - {fileID: 636979667}
   - {fileID: 2031269623}
   - {fileID: 570299394}
   - {fileID: 797066381}
   - {fileID: 1694577358}
   - {fileID: 1831849166}
+  - {fileID: 491956950}
+  - {fileID: 2066187767}
+  - {fileID: 636979667}

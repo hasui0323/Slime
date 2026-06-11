@@ -747,7 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2141138801948fa4fa8c0ab6f9b4cb17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HSkipScene
-  skipSceneName: MainScene
+  skipSceneName: RandmCardScene
 --- !u!4 &1274037217
 Transform:
   m_ObjectHideFlags: 0

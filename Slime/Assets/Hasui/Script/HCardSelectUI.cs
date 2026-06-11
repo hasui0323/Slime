@@ -81,7 +81,7 @@ public class HCardSelectUI : MonoBehaviour
 
     void UpdateSelect()
     {
-        Color32 selectColor = new Color32(0, 80, 180, 255);
+        Color32 selectColor = new Color32(0, 90, 150, 255);
 
         // ‘S•””’
         card1Image.color = Color.white;
