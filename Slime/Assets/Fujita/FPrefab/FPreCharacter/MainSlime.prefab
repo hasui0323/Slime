@@ -226,8 +226,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   dashPower: 20
+  dashCoolTime: 0.5
+  normalDashCoolTime: 0.5
   life: 1
-  isInvincible: 0
+  isDamageInvincible: 0
+  isItemInvincible: 0
+  isTimeReset: 0
+  knockBackPowerX: 10
+  knockBackPowerY: 10
   hasBullet: 0
   hasHammer: 0
   hasHeart: 0
@@ -309,6 +315,7 @@ MonoBehaviour:
   JumpPower: 25
   SpeedUpValue: 10
   SpeedUpTime: 3
+  ItemUI: {fileID: 0}
 --- !u!114 &4650623998783984874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,3 +329,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FEffectItem
   InvinciblTime: 8
+  RemoveCoolTime: 10
+  ItemUI: {fileID: 0}

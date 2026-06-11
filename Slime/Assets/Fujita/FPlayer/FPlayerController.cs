@@ -18,9 +18,16 @@ public class FPlayerController : MonoBehaviour
     public float normalDashCoolTime = 0.5f;
 
     public int life = 1;            //プレイヤーの体力
-    public bool isInvincible = false;   //プレイヤー無敵中
+    //public bool isInvincible = false;   //プレイヤー無敵中
+
+    public bool isDamageInvincible = false; // ダメージ後の無敵
+    public bool isItemInvincible = false; // アイテムによる無敵
 
     public bool isTimeReset = false;    //プレイヤーダッシュのクールタイムなし中
+
+    public float knockBackPowerX = 5.0f;//ノックバックの強さX
+    public float knockBackPowerY = 3.0f;//ノックバックの強さY
+    bool isKnockBack = false;
 
     // アイテム能力--------------------------------------------
     public bool hasBullet = false;
@@ -171,7 +178,7 @@ public class FPlayerController : MonoBehaviour
         ////プレイヤーの横の速さを変えている
         //rbody.linearVelocity = new Vector2(axisH * speed, rbody.linearVelocity.y);
 
-        if (!isDashing)
+        if (!isDashing && !isKnockBack)
         {
             rbody.linearVelocity =
                 new Vector2(axisH * speed, rbody.linearVelocity.y);
@@ -266,6 +273,19 @@ public class FPlayerController : MonoBehaviour
         Debug.Log("ダッシュ使用可能");
     }
 
+    // ダメージくらったとき無敵終了
+    void EndInvincible()
+    {
+        isDamageInvincible = false;
+        Debug.Log("無敵終了");
+    }
+
+    // ノックバック終了
+    void EndKnockBack()
+    {
+        isKnockBack = false;
+    }
+
     //---------------------------------------------
 
     //接触開始
@@ -281,7 +301,7 @@ public class FPlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Enemy")
         {
-            Damage(1);
+            Damage(1, collision.transform.position);//ダメージの大きさ
         }
     }
     //ゴール
@@ -309,16 +329,48 @@ public class FPlayerController : MonoBehaviour
 
     }
     //ダメージくらった時用
-    public void Damage(int damage)
+    public void Damage(int damage, Vector3 enemyPos)
     {
-        if (isInvincible)
+        if (isDamageInvincible || isItemInvincible)
         {
             return;
         }
 
+        isDamageInvincible = true;
+        Invoke("EndInvincible", 0.3f);
+        //---------------
+
         life -= damage;
 
         Debug.Log("残り体力：" + life);
+
+        //-------------------------------------
+        // 敵が左にいるなら右へ、右にいるなら左へ飛ぶ
+        float dir;
+
+        if (transform.position.x > enemyPos.x)
+        {
+            dir = 1.0f;
+        }
+        else
+        {
+            dir = -1.0f;
+        }
+
+        // ノックバック開始
+        isKnockBack = true;
+
+        // 速度を一旦リセット
+        rbody.linearVelocity = Vector2.zero;
+
+        // ノックバック
+        rbody.AddForce(
+            new Vector2(dir * knockBackPowerX, knockBackPowerY),
+            ForceMode2D.Impulse);
+
+        // 0.3秒後に解除
+        Invoke("EndKnockBack", 0.3f);
+        //----------------------------
 
         if (life <= 0)
         {

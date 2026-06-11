@@ -67,7 +67,7 @@ public class FEffectItem : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.X))
             {
                 // ñ≥ìGäJén
-                player.isInvincible = true;
+                player.isItemInvincible = true;
 
                 // 8ïbå„Ç…ñ≥ìGâèú
                 Invoke("EndInvincible", InvinciblTime);
@@ -142,7 +142,7 @@ public class FEffectItem : MonoBehaviour
 
     void EndInvincible()
     {
-        player.isInvincible = false;
+        player.isItemInvincible = false;
 
         Debug.Log("ñ≥ìGèIóπ");
     }

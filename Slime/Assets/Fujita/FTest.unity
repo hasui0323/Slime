@@ -902,8 +902,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 17.25, y: 0.59}
-    newSize: {x: 17.25, y: 0.59}
+    oldSize: {x: 17.2, y: 0.59}
+    newSize: {x: 17.2, y: 0.59}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -959,12 +959,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4871241765783759265, guid: 7a2f74db86c370e4fb880018a02fd890, type: 3}
+  m_Sprite: {fileID: -1846684477, guid: 7a2f74db86c370e4fb880018a02fd890, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 17.25, y: 0.59}
+  m_Size: {x: 17.2, y: 0.59}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1681,8 +1681,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 17.25, y: 0.59}
-    newSize: {x: 17.25, y: 0.59}
+    oldSize: {x: 17.2, y: 0.59}
+    newSize: {x: 17.2, y: 0.59}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1738,12 +1738,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4871241765783759265, guid: 7a2f74db86c370e4fb880018a02fd890, type: 3}
+  m_Sprite: {fileID: -1846684477, guid: 7a2f74db86c370e4fb880018a02fd890, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 17.25, y: 0.59}
+  m_Size: {x: 17.2, y: 0.59}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2519,16 +2519,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
-      propertyPath: isTimeReset
-      value: 0
+      propertyPath: knockBackPowerX
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
-      propertyPath: dashCoolTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
-      propertyPath: normalDashCoolTime
-      value: 0.5
+      propertyPath: knockBackPowerY
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6252714406311079213, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: m_Name
