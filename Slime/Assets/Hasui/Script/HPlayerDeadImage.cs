@@ -21,7 +21,7 @@ public class HPlayerDeadImage : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // ‘Šè‚Ìƒ^ƒO‚ªDead‚È‚ç‰æ‘œ•ÏX
-        if (collision.CompareTag("Dead"))
+        if (collision.CompareTag("Enemy"))
         {
             targetImage.sprite = deadSprite;
         }
