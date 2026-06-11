@@ -3,6 +3,8 @@ using UnityEngine;
 //アイテムの種類
 public enum ItemType
 {
+    RandomCard,
+
     Bullet,
     Hammer,
     Heart,
@@ -44,7 +46,22 @@ public class FItemData : MonoBehaviour
 
             //アイテム効果--------------------------------------------------
             //弾
-            if(type==ItemType.Bullet)
+            if (type == ItemType.RandomCard)
+            {
+                ItemType randomItem =
+                    (ItemType)Random.Range(1, 10);
+
+                player.GiveItem(randomItem);
+
+                ItemUI.SetItem(randomItem);
+
+                Debug.Log("ランダム取得：" + randomItem);
+
+                Destroy(gameObject);
+                return;
+            }
+
+            if (type==ItemType.Bullet)
             {
                 player.hasBullet = true;
                 player.BulletCount = 3;

@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class FPlayerController : MonoBehaviour
 {
@@ -67,6 +68,28 @@ public class FPlayerController : MonoBehaviour
         oldAnime = stopAnime;                       //停止から開始する
 
         gameState = "playing";   //ゲーム中にする
+
+        if (HItemSelectManager.Instance != null)
+        {
+            GiveItem(HItemSelectManager.Instance.selectedItem);
+
+            ItemType item = HItemSelectManager.Instance.selectedItem;
+
+
+            GiveItem(item);
+
+            // UI更新
+            HItemUI itemUI = FindFirstObjectByType<HItemUI>();
+
+            if (itemUI != null)
+            {
+                itemUI.SetItem(item);
+            }
+
+            Debug.Log(
+                "引き継いだアイテム：" +
+                HItemSelectManager.Instance.selectedItem);
+        }
     }
 
     // Update is called once per frame
@@ -310,4 +333,57 @@ public class FPlayerController : MonoBehaviour
         //速度を0にして強制停止
         rbody.linearVelocity = new Vector2(0, 0);
     }
+    public void GiveItem(ItemType item)
+    {
+        switch (item)
+        {
+            case ItemType.Bullet:
+                hasBullet = true;
+                BulletCount = 3;
+                break;
+
+            case ItemType.Hammer:
+                hasHammer = true;
+                HammerCount = 1;
+                break;
+
+            case ItemType.Heart:
+                hasHeart = true;
+                HeartCount = 1;
+                break;
+
+            case ItemType.Heaven:
+                hasHeaven = true;
+                HeavenCount = 1;
+                break;
+
+            case ItemType.Invincibl:
+                hasInvincibl = true;
+                InvinciblCount = 1;
+                break;
+
+            case ItemType.Jump:
+                hasJump = true;
+                JumpCount = 1;
+                break;
+
+            case ItemType.NoSkill:
+                hasNoSkill = true;
+                NoSkillCount = 1;
+                break;
+
+            case ItemType.Shoes:
+                hasShoes = true;
+                ShoesCount = 1;
+                break;
+
+            case ItemType.TimeReset:
+                hasTimeReset = true;
+                TimeResetCount = 1;
+                break;
+        }
+
+        Debug.Log("開始時アイテム取得：" + item);
+    }
 }
+

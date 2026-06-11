@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Hasui/Scene/CardEffectScene.unity
     guid: 1b3bb91096d80c941a59995323f8592d
   - enabled: 1
+    path: Assets/Hasui/Scene/RandmCardScene.unity
+    guid: 4f3c1db909c033a4290268dca61f6efb
+  - enabled: 1
     path: Assets/Hasui/Scene/MainScene.unity
     guid: 2846e378d4a5b454c96b840b981343e8
   - enabled: 1

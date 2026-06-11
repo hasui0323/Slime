@@ -16,6 +16,13 @@ public class HItemUI : MonoBehaviour
     public Sprite shoesSprite;
     public Sprite timeResetSprite;
 
+    void Start()
+    {
+        if (HItemSelectManager.Instance != null)
+        {
+            SetItem(HItemSelectManager.Instance.selectedItem);
+        }
+    }
     public void SetItem(ItemType type)
     {
         switch (type)

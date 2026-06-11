@@ -14,11 +14,15 @@ public class FJumpSpeed : MonoBehaviour
 
     bool isSpeedUp = false;
 
+    public HItemUI ItemUI;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GetComponent<FPlayerController>();
         rbody = GetComponent<Rigidbody2D>();
+
+        ItemUI = FindFirstObjectByType<HItemUI>();
     }
 
     // Update is called once per frame
@@ -37,6 +41,7 @@ public class FJumpSpeed : MonoBehaviour
                 if (player.JumpCount <= 0)
                 {
                     player.hasJump = false;
+                    ItemUI.ClearItem();
                 }
             }
         }
@@ -55,6 +60,7 @@ public class FJumpSpeed : MonoBehaviour
                 if (player.ShoesCount <= 0)
                 {
                     player.hasShoes = false;
+                    ItemUI.ClearItem();
                 }
             }
         }

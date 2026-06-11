@@ -9,11 +9,15 @@ public class FEffectItem : MonoBehaviour
     public float InvinciblTime = 8.0f;  // 無敵持続時間
     public float RemoveCoolTime = 10.0f;// ダッシュのクールタイムをなくす時間
 
+    public HItemUI ItemUI;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GetComponent<FPlayerController>();
         rbody = GetComponent<Rigidbody2D>();
+
+        ItemUI = FindFirstObjectByType<HItemUI>();
     }
 
     // Update is called once per frame
@@ -33,6 +37,7 @@ public class FEffectItem : MonoBehaviour
                 if (player.HeartCount <= 0)
                 {
                     player.hasHeart = false;
+                    ItemUI.ClearItem();
                 }
             }
         }
@@ -54,6 +59,7 @@ public class FEffectItem : MonoBehaviour
                 if (player.InvinciblCount <= 0)
                 {
                     player.hasInvincibl = false;
+                    ItemUI.ClearItem();
                 }
 
                 Debug.Log("無敵発動！");
@@ -84,6 +90,7 @@ public class FEffectItem : MonoBehaviour
                 if (player.HeavenCount <= 0)
                 {
                     player.hasHeaven = false;
+                    ItemUI.ClearItem();
                 }
             }
         }
@@ -105,6 +112,7 @@ public class FEffectItem : MonoBehaviour
                 if (player.TimeResetCount <= 0)
                 {
                     player.hasTimeReset = false;
+                    ItemUI.ClearItem();
                 }
 
                 Debug.Log("ダッシュクールタイム短縮！");
