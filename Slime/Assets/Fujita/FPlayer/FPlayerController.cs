@@ -12,6 +12,14 @@ public class FPlayerController : MonoBehaviour
 
     public float dashPower = 20f;   //ダッシュの強さ
     bool isDashing = false;
+    bool canDash = true;            //ダッシュ可能か
+    public float dashCoolTime = 0.5f; //クールタイム(秒)
+    public float normalDashCoolTime = 0.5f;
+
+    public int life = 1;            //プレイヤーの体力
+    public bool isInvincible = false;   //プレイヤー無敵中
+
+    public bool isTimeReset = false;    //プレイヤーダッシュのクールタイムなし中
 
     // アイテム能力--------------------------------------------
     public bool hasBullet = false;
@@ -92,7 +100,7 @@ public class FPlayerController : MonoBehaviour
             Jump();
         }
 
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && canDash)
         {
             Dash();
 
@@ -201,6 +209,7 @@ public class FPlayerController : MonoBehaviour
     //ダッシュ
     public void Dash()
     {
+        canDash = false;
         isDashing = true;
 
         //ダッシュのアニメーションにすぐ切り替える
@@ -219,11 +228,19 @@ public class FPlayerController : MonoBehaviour
 
         //少し後に解除
         Invoke("EndDash", 0.2f);
+
+        //クールタイム開始
+        Invoke("ResetDash", dashCoolTime);
     }
 
     void EndDash()
     {
         isDashing = false;
+    }
+    void ResetDash()
+    {
+        canDash = true;
+        Debug.Log("ダッシュ使用可能");
     }
 
     //---------------------------------------------
@@ -238,6 +255,10 @@ public class FPlayerController : MonoBehaviour
         else if(collision.gameObject.tag=="Dead")
         {
             GameOver(); //ゲームオーバー
+        }
+        else if (collision.gameObject.tag == "Enemy")
+        {
+            Damage(1);
         }
     }
     //ゴール
@@ -263,6 +284,23 @@ public class FPlayerController : MonoBehaviour
         ////プレイヤーを上に少しあげる演出
         //rbody.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
 
+    }
+    //ダメージくらった時用
+    public void Damage(int damage)
+    {
+        if (isInvincible)
+        {
+            return;
+        }
+
+        life -= damage;
+
+        Debug.Log("残り体力：" + life);
+
+        if (life <= 0)
+        {
+            GameOver();
+        }
     }
     //ゲーム中
     void GameStop()
