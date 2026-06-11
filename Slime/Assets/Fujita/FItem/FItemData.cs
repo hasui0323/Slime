@@ -44,12 +44,38 @@ public class FItemData : MonoBehaviour
             FPlayerController player=
                 collision.GetComponent<FPlayerController>();
 
+            // 何かアイテムを持っていたら取得不可
+            if (player.hasBullet ||
+                player.hasHammer ||
+                player.hasHeart ||
+                player.hasHeaven ||
+                player.hasInvincibl ||
+                player.hasJump ||
+                player.hasNoSkill ||
+                player.hasShoes ||
+                player.hasTimeReset)
+            {
+                return;
+            }
+
             //アイテム効果--------------------------------------------------
-            //弾
+            //ランダム
             if (type == ItemType.RandomCard)
             {
+                ItemType[] items =
+                {
+                    ItemType.Bullet,
+                    ItemType.Hammer,
+                    ItemType.Heart,
+                    ItemType.Invincibl,
+                    ItemType.Jump,
+                    ItemType.NoSkill,
+                    ItemType.Shoes,
+                    ItemType.TimeReset
+                 };
+
                 ItemType randomItem =
-                    (ItemType)Random.Range(1, 10);
+                    items[Random.Range(0, items.Length)];
 
                 player.GiveItem(randomItem);
 
@@ -60,7 +86,7 @@ public class FItemData : MonoBehaviour
                 Destroy(gameObject);
                 return;
             }
-
+            //弾
             if (type==ItemType.Bullet)
             {
                 player.hasBullet = true;

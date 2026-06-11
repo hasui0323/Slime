@@ -23,6 +23,24 @@ public class FEffectItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // NoSkillアイテム
+        if (player.hasNoSkill)
+        {
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                Debug.Log("NoSkill使用");
+
+                player.NoSkillCount--;
+
+                if (player.NoSkillCount <= 0)
+                {
+                    player.hasNoSkill = false;
+
+                    ItemUI.ClearItem();
+                }
+            }
+        }
+
         //Haertアイテムを持っている時だけ発動できる
         if (player.hasHeart)
         {

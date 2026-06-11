@@ -10,14 +10,24 @@ public class HPlayerDead : MonoBehaviour
     {
         DeadText.text = "";
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            //死亡した時の処理
-            //テキスト表示
-            DeadText.text = "GameOver";
-            timerManager.Dead();
+            FPlayerController player =
+                other.GetComponent<FPlayerController>();
+
+            // ダメージ
+            player.life--;
+
+            Debug.Log("残り体力：" + player.life);
+
+            if (player.life <= 0)
+            {
+                DeadText.text = "GameOver";
+                timerManager.Dead();
+            }
         }
     }
 }

@@ -32,7 +32,7 @@ public class HItemSelectManager : MonoBehaviour
             ItemType.Bullet,
             ItemType.Hammer,
             ItemType.Heart,
-            ItemType.Heaven,
+            //ItemType.Heaven,
             ItemType.Invincibl,
             ItemType.Jump,
             ItemType.NoSkill,
