@@ -76,26 +76,35 @@ public class FPlayerController : MonoBehaviour
 
         gameState = "playing";   //ゲーム中にする
 
+        Debug.Log("Manager = " + HItemSelectManager.Instance);
+
         if (HItemSelectManager.Instance != null)
         {
-            GiveItem(HItemSelectManager.Instance.selectedItem);
+            ItemType item =
+                HItemSelectManager.Instance.selectedItem;
 
-            ItemType item = HItemSelectManager.Instance.selectedItem;
-
-
-            GiveItem(item);
-
-            // UI更新
-            HItemUI itemUI = FindFirstObjectByType<HItemUI>();
-
-            if (itemUI != null)
-            {
-                itemUI.SetItem(item);
-            }
+            Debug.Log("引き継いだアイテム：" + item);
 
             Debug.Log(
-                "引き継いだアイテム：" +
-                HItemSelectManager.Instance.selectedItem);
+    "ゲーム開始時 selectedItem = " +
+    HItemSelectManager.Instance.selectedItem);
+
+            if (item != ItemType.RandomCard)
+            {
+                GiveItem(item);
+
+                HItemUI itemUI =
+                    FindFirstObjectByType<HItemUI>();
+
+                if (itemUI != null)
+                {
+                    itemUI.SetItem(item);
+                }
+            }
+
+            // 使用後リセット
+            HItemSelectManager.Instance.selectedItem =
+                ItemType.RandomCard;
         }
     }
 

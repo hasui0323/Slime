@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class HCardSelectUI : MonoBehaviour
 {
-    public HItemSelectManager manager;
+    private HItemSelectManager manager;
 
     public string nextSceneName = "GameScene";
 
@@ -26,6 +26,14 @@ public class HCardSelectUI : MonoBehaviour
 
     void Start()
     {
+        manager = HItemSelectManager.Instance;
+
+        if (manager == null)
+        {
+            Debug.LogError("HItemSelectManagerが見つかりません");
+            return;
+        }
+
         manager.CreateRandomItems();
 
         card1Image.sprite = GetSprite(manager.randomItems[0]);
@@ -72,8 +80,8 @@ public class HCardSelectUI : MonoBehaviour
         {
             manager.SelectItem(selectIndex);
 
-            Debug.Log("決定：" + selectIndex);
-
+            Debug.Log("決定アイテム = " +
+            manager.selectedItem);
 
             SceneManager.LoadScene(nextSceneName);
         }
@@ -88,7 +96,6 @@ public class HCardSelectUI : MonoBehaviour
         card2Image.color = Color.white;
         card3Image.color = Color.white;
 
-        // 選択中を黄色
         if (selectIndex == 0)
         {
             card1Image.color = selectColor;

@@ -6,7 +6,7 @@ public class HItemSelectManager : MonoBehaviour
     public static HItemSelectManager Instance;
 
     public List<ItemType> randomItems = new List<ItemType>();
-    public ItemType selectedItem;
+    public ItemType selectedItem = ItemType.RandomCard;
 
     private void Awake()
     {
@@ -32,7 +32,7 @@ public class HItemSelectManager : MonoBehaviour
             ItemType.Bullet,
             ItemType.Hammer,
             ItemType.Heart,
-            //ItemType.Heaven,
+            ItemType.Heaven,
             ItemType.Invincibl,
             ItemType.Jump,
             ItemType.NoSkill,
@@ -53,5 +53,9 @@ public class HItemSelectManager : MonoBehaviour
         selectedItem = randomItems[index];
 
         Debug.Log("ëIëÅF" + selectedItem);
+
+        Debug.Log("SelectItemé¿çs");
+        Debug.Log("index = " + index);
+        Debug.Log("selectedItem = " + selectedItem);
     }
 }
