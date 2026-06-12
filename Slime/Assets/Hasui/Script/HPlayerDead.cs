@@ -19,7 +19,7 @@ public class HPlayerDead : MonoBehaviour
                 other.GetComponent<FPlayerController>();
 
             // ダメージ
-            player.Damage(1);
+          player.Damage(1, transform.position);
 
             Debug.Log("残り体力：" + player.life);
 
