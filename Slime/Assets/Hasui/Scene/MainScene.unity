@@ -6820,6 +6820,10 @@ PrefabInstance:
       propertyPath: playerDead
       value: 
       objectReference: {fileID: 494855544}
+    - target: {fileID: 4650623998783984874, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
+      propertyPath: InvinciblTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6252714406311079213, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: m_Name
       value: MainSlime

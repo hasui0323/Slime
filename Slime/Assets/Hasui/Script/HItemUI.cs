@@ -21,51 +21,50 @@ public class HItemUI : MonoBehaviour
 
     void Start()
     {
-        if (HItemSelectManager.Instance != null)
         {
-            SetItem(HItemSelectManager.Instance.selectedItem);
-        }
+            ItemType item =
+                HItemSelectManager.Instance.selectedItem;
 
-        FPlayerController player =
-      FindFirstObjectByType<FPlayerController>();
+            SetItem(item);
 
-        if (player == null) return;
+            switch (item)
+            {
+                case ItemType.Bullet:
+                    ShowItemInfo("3 ‰ñ");
+                    break;
 
-        if (player.hasBullet)
-        {
-            ShowItemInfo(player.BulletCount + " ‰ñ");
-        }
-        else if (player.hasHammer)
-        {
-            ShowItemInfo(player.HammerCount + " ‰ñ");
-        }
-        else if (player.hasHeart)
-        {
-            ShowItemInfo( player.HeartCount + " ‰ñ");
-        }
-        else if (player.hasHeaven)
-        {
-            ShowItemInfo(player.HeavenCount + " ‰ñ");
-        }
-        else if (player.hasJump)
-        {
-            ShowItemInfo( player.JumpCount + " ‰ñ");
-        }
-        else if (player.hasNoSkill)
-        {
-            ShowItemInfo(player.NoSkillCount + " ‰ñ");
-        }
-        else if (player.hasInvincibl)
-        {
-            ShowItemInfo(" 8 •b");
-        }
-        else if (player.hasShoes)
-        {
-            ShowItemInfo(" 8 •b");
-        }
-        else if (player.hasTimeReset)
-        {
-            ShowItemInfo(" 10 •b");
+                case ItemType.Hammer:
+                    ShowItemInfo("1 ‰ñ");
+                    break;
+
+                case ItemType.Heart:
+                    ShowItemInfo("1 ‰ñ");
+                    break;
+
+                case ItemType.Heaven:
+                    ShowItemInfo("1 ‰ñ");
+                    break;
+
+                case ItemType.Invincibl:
+                    ShowItemInfo("8 •b");
+                    break;
+
+                case ItemType.Jump:
+                    ShowItemInfo("1 ‰ñ");
+                    break;
+
+                case ItemType.NoSkill:
+                    ShowItemInfo("1 ‰ñ");
+                    break;
+
+                case ItemType.Shoes:
+                    ShowItemInfo("8 •b");
+                    break;
+
+                case ItemType.TimeReset:
+                    ShowItemInfo("10 •b");
+                    break;
+            }
         }
     }
     public void SetItem(ItemType type)
