@@ -329,6 +329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6394875c4204744bb82258354e7231e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FEffectItem
-  InvinciblTime: 8
-  RemoveCoolTime: 3
+  InvinciblTime: 3
+  RemoveCoolTime: 10
   ItemUI: {fileID: 0}

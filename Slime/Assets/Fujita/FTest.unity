@@ -393,6 +393,7 @@ MonoBehaviour:
   noSkillSprite: {fileID: -710065906232945046, guid: 0ce543451d8eb014a9683eba026ac4c6, type: 3}
   shoesSprite: {fileID: 2371641743025836735, guid: bc42f95f32079b642965b59041dadfe8, type: 3}
   timeResetSprite: {fileID: 3561564174171895262, guid: 73bc0a9f2b0ee5e4fbcc825397bfe4b3, type: 3}
+  itemInfoText: {fileID: 0}
 --- !u!4 &245294127
 Transform:
   m_ObjectHideFlags: 0
@@ -2370,8 +2371,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4650623998783984874, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
-      propertyPath: RemoveCoolTime
+      propertyPath: InvinciblTime
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650623998783984874, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
+      propertyPath: RemoveCoolTime
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6252714406311079213, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: m_Name
