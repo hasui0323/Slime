@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class FEffectItem : MonoBehaviour
 {
@@ -18,6 +19,21 @@ public class FEffectItem : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
 
         ItemUI = FindFirstObjectByType<HItemUI>();
+
+        if (player.hasHeart)
+            ItemUI.ShowItemInfo(player.HeartCount + " ‰ñ");
+
+        else if (player.hasHeaven)
+            ItemUI.ShowItemInfo(player.HeavenCount + " ‰ñ");
+
+        else if (player.hasNoSkill)
+            ItemUI.ShowItemInfo(player.NoSkillCount + " ‰ñ");
+
+        else if (player.hasInvincibl)
+            ItemUI.ShowItemInfo(InvinciblTime + " •b");
+
+        else if (player.hasTimeReset)
+            ItemUI.ShowItemInfo( RemoveCoolTime + " •b");
     }
 
     // Update is called once per frame
@@ -31,6 +47,8 @@ public class FEffectItem : MonoBehaviour
                 Debug.Log("NoSkillŽg—p");
 
                 player.NoSkillCount--;
+
+                ItemUI.ShowItemInfo(player.NoSkillCount + " ‰ñ");
 
                 if (player.NoSkillCount <= 0)
                 {
@@ -52,6 +70,8 @@ public class FEffectItem : MonoBehaviour
 
                 player.HeartCount--;
 
+                ItemUI.ShowItemInfo(player.HeartCount + " ‰ñ");
+
                 if (player.HeartCount <= 0)
                 {
                     player.hasHeart = false;
@@ -70,14 +90,16 @@ public class FEffectItem : MonoBehaviour
                 player.isItemInvincible = true;
 
                 // 8•bŒã‚É–³“G‰ðœ
-                Invoke("EndInvincible", InvinciblTime);
+                //Invoke("EndInvincible", InvinciblTime);
 
                 player.InvinciblCount--;
+
+                StartCoroutine(InvincibleTimer());
 
                 if (player.InvinciblCount <= 0)
                 {
                     player.hasInvincibl = false;
-                    ItemUI.ClearItem();
+                    //ItemUI.ClearItem();
                 }
 
                 Debug.Log("–³“G”­“®I");
@@ -105,6 +127,8 @@ public class FEffectItem : MonoBehaviour
 
                 player.HeavenCount--;
 
+                ItemUI.ShowItemInfo(player.HeavenCount + " ‰ñ");
+
                 if (player.HeavenCount <= 0)
                 {
                     player.hasHeaven = false;
@@ -123,14 +147,16 @@ public class FEffectItem : MonoBehaviour
                 player.dashCoolTime = 0.3f;
 
                 // 10•bŒã‚ÉƒN[ƒ‹ƒ^ƒCƒ€‚È‚µ‰ðœ
-                Invoke("EndTimeReset", RemoveCoolTime);
+                //Invoke("EndTimeReset", RemoveCoolTime);
 
                 player.TimeResetCount--;
+
+                StartCoroutine(TimeResetTimer());
 
                 if (player.TimeResetCount <= 0)
                 {
                     player.hasTimeReset = false;
-                    ItemUI.ClearItem();
+                    //ItemUI.ClearItem();
                 }
 
                 Debug.Log("ƒ_ƒbƒVƒ…ƒN[ƒ‹ƒ^ƒCƒ€’ZkI");
@@ -151,5 +177,49 @@ public class FEffectItem : MonoBehaviour
         player.dashCoolTime = player.normalDashCoolTime;
 
         Debug.Log("ƒN[ƒ‹ƒ^ƒCƒ€’ZkI—¹");
+    }
+
+    IEnumerator InvincibleTimer()
+    {
+        float timer = InvinciblTime;
+
+        while (timer > 0)
+        {
+            ItemUI.ShowItemInfo(
+                Mathf.CeilToInt(timer) + " •b");
+
+            timer -= Time.deltaTime;
+            yield return null;
+        }
+
+        ItemUI.ShowItemInfo("0 •b");
+
+        yield return new WaitForSeconds(0.3f);
+
+        ItemUI.ClearItem();
+
+        EndInvincible();
+    }
+
+    IEnumerator TimeResetTimer()
+    {
+        float timer = RemoveCoolTime;
+
+        while (timer > 0)
+        {
+            ItemUI.ShowItemInfo(
+                Mathf.CeilToInt(timer) + " •b");
+
+            timer -= Time.deltaTime;
+            yield return null;
+        }
+
+        ItemUI.ShowItemInfo("0 •b");
+
+        yield return new WaitForSeconds(0.3f);
+
+        ItemUI.ClearItem();
+
+        EndTimeReset();
     }
 }

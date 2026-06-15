@@ -21,6 +21,15 @@ public class FBulletShot : MonoBehaviour
 
         ItemUI = FindFirstObjectByType<HItemUI>();
 
+        if (player.hasBullet)
+        {
+            ItemUI.ShowItemInfo(player.BulletCount + " ‰ñ");
+        }
+        else if (player.hasHammer)
+        {
+            ItemUI.ShowItemInfo(player.HammerCount + " ‰ñ");
+        }
+
         Debug.Log(ItemUI);
     }
 
@@ -36,6 +45,8 @@ public class FBulletShot : MonoBehaviour
                 ShotBullet();
 
                 player.BulletCount--;
+
+                ItemUI.ShowItemInfo(player.BulletCount + " ‰ñ");
 
                 if (player.BulletCount <= 0)
                 {
@@ -54,6 +65,8 @@ public class FBulletShot : MonoBehaviour
                 ShotHammer();
 
                 player.HammerCount--;
+
+                ItemUI.ShowItemInfo(player.HammerCount + " ‰ñ");
 
                 if (player.HammerCount <= 0)
                 {

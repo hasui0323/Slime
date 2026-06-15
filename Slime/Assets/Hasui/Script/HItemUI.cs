@@ -16,11 +16,56 @@ public class HItemUI : MonoBehaviour
     public Sprite shoesSprite;
     public Sprite timeResetSprite;
 
+    //å¯â éûä‘ÅEégópâÒêîï\é¶
+    public Text itemInfoText;
+
     void Start()
     {
         if (HItemSelectManager.Instance != null)
         {
             SetItem(HItemSelectManager.Instance.selectedItem);
+        }
+
+        FPlayerController player =
+      FindFirstObjectByType<FPlayerController>();
+
+        if (player == null) return;
+
+        if (player.hasBullet)
+        {
+            ShowItemInfo(player.BulletCount + " âÒ");
+        }
+        else if (player.hasHammer)
+        {
+            ShowItemInfo(player.HammerCount + " âÒ");
+        }
+        else if (player.hasHeart)
+        {
+            ShowItemInfo( player.HeartCount + " âÒ");
+        }
+        else if (player.hasHeaven)
+        {
+            ShowItemInfo(player.HeavenCount + " âÒ");
+        }
+        else if (player.hasJump)
+        {
+            ShowItemInfo( player.JumpCount + " âÒ");
+        }
+        else if (player.hasNoSkill)
+        {
+            ShowItemInfo(player.NoSkillCount + " âÒ");
+        }
+        else if (player.hasInvincibl)
+        {
+            ShowItemInfo(" 8 ïb");
+        }
+        else if (player.hasShoes)
+        {
+            ShowItemInfo(" 8 ïb");
+        }
+        else if (player.hasTimeReset)
+        {
+            ShowItemInfo(" 10 ïb");
         }
     }
     public void SetItem(ItemType type)
@@ -68,5 +113,19 @@ public class HItemUI : MonoBehaviour
     public void ClearItem()
     {
         itemImage.sprite = defaultSprite;
+        itemInfoText.text = "";
+    }
+
+    public void ShowItemInfo(string info)
+    {
+        Debug.Log("ShowItemInfoåƒÇ—èoÇµ : " + info);
+
+        if (itemInfoText == null)
+        {
+            Debug.LogError("itemInfoText Ç™ñ¢ê›íËÇ≈Ç∑");
+            return;
+        }
+
+        itemInfoText.text = info;
     }
 }

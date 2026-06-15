@@ -1,3 +1,4 @@
+using NUnit.Framework.Internal;
 using UnityEngine;
 
 //アイテムの種類
@@ -28,6 +29,8 @@ public class FItemData : MonoBehaviour
     void Start()
     {
         ItemUI = FindFirstObjectByType<HItemUI>();
+
+        Debug.Log(ItemUI);
     }
 
     // Update is called once per frame
@@ -37,12 +40,22 @@ public class FItemData : MonoBehaviour
     }
     //接種
     void OnTriggerEnter2D(Collider2D collision)
-    { 
-        if(collision.gameObject.tag=="Player")
+    {
+        Debug.Log("アイテムに接触");
+        if (collision.gameObject.tag=="Player")
         {
+            Debug.Log("Player接触");
             //プレイヤースクリプトを取得
             FPlayerController player=
                 collision.GetComponent<FPlayerController>();
+
+            Debug.Log(player);
+
+            if (player == null)
+            {
+                Debug.LogError("FPlayerControllerが取得できていません");
+                return;
+            }
 
             // 何かアイテムを持っていたら取得不可
             if (player.hasBullet ||
@@ -55,8 +68,10 @@ public class FItemData : MonoBehaviour
                 player.hasShoes ||
                 player.hasTimeReset)
             {
+                Debug.Log("既にアイテム所持中");
                 return;
             }
+            Debug.Log("所持チェック通過");
 
             //アイテム効果--------------------------------------------------
             //ランダム
@@ -80,6 +95,39 @@ public class FItemData : MonoBehaviour
                 player.GiveItem(randomItem);
 
                 ItemUI.SetItem(randomItem);
+
+                if (randomItem == ItemType.Bullet)
+                {
+                    ItemUI.ShowItemInfo(" 3 回");
+                }
+                else if (randomItem == ItemType.Hammer)
+                {
+                    ItemUI.ShowItemInfo(" 1 回");
+                }
+                else if (randomItem == ItemType.Heart)
+                {
+                    ItemUI.ShowItemInfo(" 1 回");
+                }
+                else if (randomItem == ItemType.Invincibl)
+                {
+                    ItemUI.ShowItemInfo(" 3 秒");
+                }
+                else if (randomItem == ItemType.Jump)
+                {
+                    ItemUI.ShowItemInfo(" 1 回");
+                }
+                else if (randomItem == ItemType.NoSkill)
+                {
+                    ItemUI.ShowItemInfo(" 1 回");
+                }
+                else if (randomItem == ItemType.Shoes)
+                {
+                    ItemUI.ShowItemInfo(" 3 秒");
+                }
+                else if (randomItem == ItemType.TimeReset)
+                {
+                    ItemUI.ShowItemInfo(" 10 秒");
+                }
 
                 Debug.Log("ランダム取得：" + randomItem);
 
@@ -142,6 +190,43 @@ public class FItemData : MonoBehaviour
             }
 
             ItemUI.SetItem(type);
+
+            if (type == ItemType.Bullet)
+            {
+                ItemUI.ShowItemInfo("残り " + player.BulletCount + " 回");
+            }
+            else if (type == ItemType.Hammer)
+            {
+                ItemUI.ShowItemInfo("残り " + player.HammerCount + " 回");
+            }
+            else if (type == ItemType.Heart)
+            {
+                ItemUI.ShowItemInfo("残り " + player.HeartCount + " 回");
+            }
+            else if (type == ItemType.Heaven)
+            {
+                ItemUI.ShowItemInfo("残り " + player.HeavenCount + " 回");
+            }
+            else if (type == ItemType.Jump)
+            {
+                ItemUI.ShowItemInfo("残り " + player.JumpCount + " 回");
+            }
+            else if (type == ItemType.NoSkill)
+            {
+                ItemUI.ShowItemInfo("残り " + player.NoSkillCount + " 回");
+            }
+            else if (type == ItemType.Invincibl)
+            {
+                ItemUI.ShowItemInfo("効果時間 8 秒");
+            }
+            else if (type == ItemType.Shoes)
+            {
+                ItemUI.ShowItemInfo("効果時間 8 秒");
+            }
+            else if (type == ItemType.TimeReset)
+            {
+                ItemUI.ShowItemInfo("効果時間 10 秒");
+            }
 
             //----------------------------------------------------
             // アイテムを消す

@@ -23,6 +23,15 @@ public class FJumpSpeed : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
 
         ItemUI = FindFirstObjectByType<HItemUI>();
+
+        if (player.hasJump)
+        {
+            ItemUI.ShowItemInfo(player.JumpCount + " ‰ñ");
+        }
+        else if (player.hasShoes)
+        {
+            ItemUI.ShowItemInfo(SpeedUpTime + " •b");
+        }
     }
 
     // Update is called once per frame
@@ -37,6 +46,8 @@ public class FJumpSpeed : MonoBehaviour
                 JumpSpeed();
 
                 player.JumpCount--;
+
+                ItemUI.ShowItemInfo( player.JumpCount + " ‰ñ");
 
                 if (player.JumpCount <= 0)
                 {
@@ -53,14 +64,15 @@ public class FJumpSpeed : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.X))
             {
                 Debug.Log("ƒVƒ…[ƒY”­“®");
-                StartCoroutine(ShoesSpeed());
-
+               
                 player.ShoesCount--;
+
+                StartCoroutine(ShoesSpeed());
 
                 if (player.ShoesCount <= 0)
                 {
                     player.hasShoes = false;
-                    ItemUI.ClearItem();
+                    //ItemUI.ClearItem();
                 }
             }
         }
@@ -77,16 +89,33 @@ public class FJumpSpeed : MonoBehaviour
     {
         isSpeedUp = true;
 
-        // ‘«‚ð‘¬‚­‚·‚é
         player.speed += SpeedUpValue;
 
-        // 8•b‘Ò‚Â
-        yield return new WaitForSeconds(SpeedUpTime);
+        float timer = SpeedUpTime;
 
-        // Œ³‚É–ß‚·
+        while (timer > 0)
+        {
+            ItemUI.ShowItemInfo(
+                Mathf.CeilToInt(timer) + " •b");
+
+            timer -= Time.deltaTime;
+            yield return null;
+        }
+
+        ItemUI.ShowItemInfo("0 •b");
+
+        yield return new WaitForSeconds(1.0f);
+
         player.speed -= SpeedUpValue;
 
         isSpeedUp = false;
+
+        ItemUI.ClearItem();
+
+        if (player.hasShoes)
+        {
+            ItemUI.ShowItemInfo(SpeedUpTime + " •b");
+        }
     }
 
 }
