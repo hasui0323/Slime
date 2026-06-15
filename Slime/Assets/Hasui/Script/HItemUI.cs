@@ -46,7 +46,7 @@ public class HItemUI : MonoBehaviour
                     break;
 
                 case ItemType.Invincibl:
-                    ShowItemInfo("8 •b");
+                    ShowItemInfo("3 •b");
                     break;
 
                 case ItemType.Jump:
