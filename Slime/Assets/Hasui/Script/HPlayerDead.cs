@@ -11,6 +11,12 @@ public class HPlayerDead : MonoBehaviour
         DeadText.text = "";
     }
 
+    public void Dead()
+    {
+        DeadText.text = "GameOver";
+        timerManager.Dead();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -25,8 +31,9 @@ public class HPlayerDead : MonoBehaviour
 
             if (player.life <= 0)
             {
-                DeadText.text = "GameOver";
-                timerManager.Dead();
+                // DeadText.text = "GameOver";
+                // timerManager.Dead();
+                Dead();
             }
         }
     }

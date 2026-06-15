@@ -55,11 +55,14 @@ public class TimerManager : MonoBehaviour
             //•ª‚Æ•b
             int minutes = Mathf.FloorToInt(timer / 60);
             int seconds = Mathf.FloorToInt(timer % 60);
+            int milliseconds = Mathf.FloorToInt((timer % 1) * 100);
 
             //‰æ–Ê‚É•\Ž¦
             timerText.text =
-                minutes.ToString("00") + "m" +
-                seconds.ToString("00") + "s";
+                minutes.ToString("00") + ":" +
+                seconds.ToString("00") + "." +
+                milliseconds.ToString("00");
+
         }
     }
 

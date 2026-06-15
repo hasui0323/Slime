@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEditor.Progress;
 
 public class FPlayerController : MonoBehaviour
@@ -28,6 +29,9 @@ public class FPlayerController : MonoBehaviour
     public float knockBackPowerX = 5.0f;//ノックバックの強さX
     public float knockBackPowerY = 3.0f;//ノックバックの強さY
     bool isKnockBack = false;
+
+    //Heavn用-------------------------------------------------
+    public HPlayerDead playerDead;
 
     // アイテム能力--------------------------------------------
     public bool hasBullet = false;
@@ -325,6 +329,8 @@ public class FPlayerController : MonoBehaviour
     public void GameOver()
     {
         animator.Play(deadAnime);
+
+        playerDead.Dead();
 
         gameState = "gameover";
         GameStop(); //ゲーム停止
