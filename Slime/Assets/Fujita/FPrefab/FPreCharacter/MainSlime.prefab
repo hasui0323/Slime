@@ -234,6 +234,7 @@ MonoBehaviour:
   isTimeReset: 0
   knockBackPowerX: 10
   knockBackPowerY: 10
+  playerDead: {fileID: 0}
   hasBullet: 0
   hasHammer: 0
   hasHeart: 0
@@ -329,5 +330,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FEffectItem
   InvinciblTime: 8
-  RemoveCoolTime: 10
+  RemoveCoolTime: 3
   ItemUI: {fileID: 0}
