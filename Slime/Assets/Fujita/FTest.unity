@@ -2085,9 +2085,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1743846102156465621, guid: bf6ef903d0d78b94daa9226d777a2df3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5039693553719209487, guid: bf6ef903d0d78b94daa9226d777a2df3, type: 3}
       propertyPath: m_Name
       value: EnemySlime
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039693553719209487, guid: bf6ef903d0d78b94daa9226d777a2df3, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7582497637102130007, guid: bf6ef903d0d78b94daa9226d777a2df3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2186,6 +2194,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Time Reset
       objectReference: {fileID: 0}
+    - target: {fileID: 6850251328176712640, guid: 84781bf343f623942bb7a912b22ab764, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2202,6 +2214,10 @@ PrefabInstance:
     - target: {fileID: 677920419676287621, guid: 7022244b5e1699649bb097d31e1b40c4, type: 3}
       propertyPath: m_Name
       value: Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 677920419676287621, guid: 7022244b5e1699649bb097d31e1b40c4, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4850052682026225370, guid: 7022244b5e1699649bb097d31e1b40c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2390,6 +2406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shoes
       objectReference: {fileID: 0}
+    - target: {fileID: 1031470172153095210, guid: b9e0a9162cb4e154ba75e4f1a0054330, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8010450872850230437, guid: b9e0a9162cb4e154ba75e4f1a0054330, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.94487
@@ -2532,6 +2552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heaven and Hell
       objectReference: {fileID: 0}
+    - target: {fileID: 5997092372652676824, guid: 211e9a668957257459c7bf30badb5831, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8923192358549631712, guid: 211e9a668957257459c7bf30badb5831, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.56487
@@ -2588,6 +2612,10 @@ PrefabInstance:
     - target: {fileID: 8112903309983587935, guid: f4347a0a0e175d546932f76fff92e6cc, type: 3}
       propertyPath: m_Name
       value: Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112903309983587935, guid: f4347a0a0e175d546932f76fff92e6cc, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8675931592501369769, guid: f4347a0a0e175d546932f76fff92e6cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2711,13 +2739,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hammer
       objectReference: {fileID: 0}
+    - target: {fileID: 597331228668259245, guid: 9de8f5199ca647c4890b10629715e5b3, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 864521723127009842, guid: 9de8f5199ca647c4890b10629715e5b3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.9851298
+      value: -3.75
       objectReference: {fileID: 0}
     - target: {fileID: 864521723127009842, guid: 9de8f5199ca647c4890b10629715e5b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.37369
+      value: -1.49
       objectReference: {fileID: 0}
     - target: {fileID: 864521723127009842, guid: 9de8f5199ca647c4890b10629715e5b3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2767,6 +2799,10 @@ PrefabInstance:
     - target: {fileID: 2651502171734510874, guid: 4ca4aa078ec093047a8161d78bdc5cf7, type: 3}
       propertyPath: m_Name
       value: Invincibl
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651502171734510874, guid: 4ca4aa078ec093047a8161d78bdc5cf7, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4034786311241125487, guid: 4ca4aa078ec093047a8161d78bdc5cf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2824,6 +2860,10 @@ PrefabInstance:
     - target: {fileID: 984266649325910056, guid: 6aeeb296be50fc3448a90da860dd78b3, type: 3}
       propertyPath: m_Name
       value: Heart
+      objectReference: {fileID: 0}
+    - target: {fileID: 984266649325910056, guid: 6aeeb296be50fc3448a90da860dd78b3, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5650615598516326376, guid: 6aeeb296be50fc3448a90da860dd78b3, type: 3}
       propertyPath: m_LocalPosition.x

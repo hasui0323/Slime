@@ -144,9 +144,11 @@ public class FItemData : MonoBehaviour
             ItemUI.SetItem(type);
 
             //----------------------------------------------------
+            // アイテムを消す
+            Destroy(gameObject);
         }
 
-        // アイテムを消す
-        Destroy(gameObject);
+        //// アイテムを消す
+        //Destroy(gameObject);
     }
 }

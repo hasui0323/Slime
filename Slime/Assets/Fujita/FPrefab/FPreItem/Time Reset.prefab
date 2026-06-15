@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8609649399974476615}
   - component: {fileID: 1687808083590508969}
   - component: {fileID: 6653494790586504844}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Time Reset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6850251328176712640}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.31, y: -1.4, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
