@@ -58,7 +58,7 @@ public class HItemUI : MonoBehaviour
                     break;
 
                 case ItemType.Shoes:
-                    ShowItemInfo("8 •b");
+                    ShowItemInfo("3 •b");
                     break;
 
                 case ItemType.TimeReset:

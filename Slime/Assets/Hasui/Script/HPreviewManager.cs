@@ -99,7 +99,7 @@ public class HPreviewManager : MonoBehaviour
             //テキストサイズ変更
             previewText2.fontSize = 70;
             previewText1.text = "";
-            previewText2.text = "足が速くなる\n(8秒)";
+            previewText2.text = "足が速くなる\n(3秒)";
 
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage2.color = new Color(1, 1, 1, 1);
@@ -251,7 +251,7 @@ public class HPreviewManager : MonoBehaviour
             //テキストサイズ変更
             previewText2.fontSize = 60;
             previewText1.text = "";
-            previewText2.text = "敵やダメージオブジェクトに対して無敵\n（オブジェクトをすり抜ける・２秒）";
+            previewText2.text = "敵やダメージオブジェクトに対して無敵\n（オブジェクトをすり抜ける・3秒）";
 
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage8.color = new Color(1, 1, 1, 1);
