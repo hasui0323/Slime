@@ -98,35 +98,35 @@ public class FItemData : MonoBehaviour
 
                 if (randomItem == ItemType.Bullet)
                 {
-                    ItemUI.ShowItemInfo(" 3 回");
+                    ItemUI.ShowItemInfo("残り 1 回");
                 }
                 else if (randomItem == ItemType.Hammer)
                 {
-                    ItemUI.ShowItemInfo(" 1 回");
+                    ItemUI.ShowItemInfo("残り 1 回");
                 }
                 else if (randomItem == ItemType.Heart)
                 {
-                    ItemUI.ShowItemInfo(" 1 回");
+                    ItemUI.ShowItemInfo("残り 1 回");
                 }
                 else if (randomItem == ItemType.Invincibl)
                 {
-                    ItemUI.ShowItemInfo(" 3 秒");
+                    ItemUI.ShowItemInfo("残り 3 秒");
                 }
                 else if (randomItem == ItemType.Jump)
                 {
-                    ItemUI.ShowItemInfo(" 1 回");
+                    ItemUI.ShowItemInfo("残り 1 回");
                 }
                 else if (randomItem == ItemType.NoSkill)
                 {
-                    ItemUI.ShowItemInfo(" 1 回");
+                    ItemUI.ShowItemInfo("残り 1 回");
                 }
                 else if (randomItem == ItemType.Shoes)
                 {
-                    ItemUI.ShowItemInfo(" 3 秒");
+                    ItemUI.ShowItemInfo("残り 3 秒");
                 }
                 else if (randomItem == ItemType.TimeReset)
                 {
-                    ItemUI.ShowItemInfo(" 10 秒");
+                    ItemUI.ShowItemInfo("残り 10 秒");
                 }
 
                 Debug.Log("ランダム取得：" + randomItem);

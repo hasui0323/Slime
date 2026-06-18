@@ -175,7 +175,7 @@ public class HPreviewManager : MonoBehaviour
 
             //テキストサイズ変更
             previewText1.fontSize = 70;
-            previewText1.text = "敵を倒せる弾を撃つ\n(3回)";
+            previewText1.text = "敵を倒せる弾を撃つ\n(1回)";
             previewText2.text = "";
 
             previewImage11.color = new Color(1, 1, 1, 1);
