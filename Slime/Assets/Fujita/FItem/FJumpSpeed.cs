@@ -26,11 +26,11 @@ public class FJumpSpeed : MonoBehaviour
 
         if (player.hasJump)
         {
-            ItemUI.ShowItemInfo("Žc‚è" + player.JumpCount + " ‰ñ");
+            ItemUI.ShowItemInfo("Žc‚è " + player.JumpCount + " ‰ñ");
         }
         else if (player.hasShoes)
         {
-            ItemUI.ShowItemInfo("Žc‚è" + SpeedUpTime + " •b");
+            ItemUI.ShowItemInfo("Žc‚è " + SpeedUpTime + " •b");
         }
     }
 
@@ -47,7 +47,7 @@ public class FJumpSpeed : MonoBehaviour
 
                 player.JumpCount--;
 
-                ItemUI.ShowItemInfo( "Žc‚è" + player.JumpCount + " ‰ñ");
+                ItemUI.ShowItemInfo( "Žc‚è " + player.JumpCount + " ‰ñ");
 
                 if (player.JumpCount <= 0)
                 {
@@ -95,7 +95,7 @@ public class FJumpSpeed : MonoBehaviour
 
         while (timer > 0)
         {
-            ItemUI.ShowItemInfo("Žc‚è"+
+            ItemUI.ShowItemInfo("Žc‚è "+
                 Mathf.CeilToInt(timer) + " •b");
 
             timer -= Time.deltaTime;
@@ -114,7 +114,7 @@ public class FJumpSpeed : MonoBehaviour
 
         if (player.hasShoes)
         {
-            ItemUI.ShowItemInfo("Žc‚è" + SpeedUpTime + " •b");
+            ItemUI.ShowItemInfo("Žc‚è " + SpeedUpTime + " •b");
         }
     }
 

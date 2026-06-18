@@ -21,19 +21,19 @@ public class FEffectItem : MonoBehaviour
         ItemUI = FindFirstObjectByType<HItemUI>();
 
         if (player.hasHeart)
-            ItemUI.ShowItemInfo("残り" + player.HeartCount + " 回");
+            ItemUI.ShowItemInfo("残り " + player.HeartCount + " 回");
 
         else if (player.hasHeaven)
-            ItemUI.ShowItemInfo("残り" + player.HeavenCount + " 回");
+            ItemUI.ShowItemInfo("残り " + player.HeavenCount + " 回");
 
         else if (player.hasNoSkill)
-            ItemUI.ShowItemInfo("残り" + player.NoSkillCount + " 回");
+            ItemUI.ShowItemInfo("残り " + player.NoSkillCount + " 回");
 
         else if (player.hasInvincibl)
-            ItemUI.ShowItemInfo("残り" + InvinciblTime + " 秒");
+            ItemUI.ShowItemInfo("残り " + InvinciblTime + " 秒");
 
         else if (player.hasTimeReset)
-            ItemUI.ShowItemInfo("残り" + RemoveCoolTime + " 秒");
+            ItemUI.ShowItemInfo("残り " + RemoveCoolTime + " 秒");
     }
 
     // Update is called once per frame
@@ -48,7 +48,7 @@ public class FEffectItem : MonoBehaviour
 
                 player.NoSkillCount--;
 
-                ItemUI.ShowItemInfo("残り" + player.NoSkillCount + " 回");
+                ItemUI.ShowItemInfo("残り " + player.NoSkillCount + " 回");
 
                 if (player.NoSkillCount <= 0)
                 {
@@ -70,7 +70,7 @@ public class FEffectItem : MonoBehaviour
 
                 player.HeartCount--;
 
-                ItemUI.ShowItemInfo("残り" + player.HeartCount + " 回");
+                ItemUI.ShowItemInfo("残り " + player.HeartCount + " 回");
 
                 if (player.HeartCount <= 0)
                 {
@@ -127,7 +127,7 @@ public class FEffectItem : MonoBehaviour
 
                 player.HeavenCount--;
 
-                ItemUI.ShowItemInfo("残り" + player.HeavenCount + " 回");
+                ItemUI.ShowItemInfo("残り " + player.HeavenCount + " 回");
 
                 if (player.HeavenCount <= 0)
                 {
@@ -185,7 +185,7 @@ public class FEffectItem : MonoBehaviour
 
         while (timer > 0)
         {
-            ItemUI.ShowItemInfo("残り" +
+            ItemUI.ShowItemInfo("残り " +
                 Mathf.CeilToInt(timer) + " 秒");
 
             timer -= Time.deltaTime;
@@ -207,7 +207,7 @@ public class FEffectItem : MonoBehaviour
 
         while (timer > 0)
         {
-            ItemUI.ShowItemInfo("残り" +
+            ItemUI.ShowItemInfo("残り " +
                 Mathf.CeilToInt(timer) + " 秒");
 
             timer -= Time.deltaTime;
