@@ -185,7 +185,7 @@ public class FEffectItem : MonoBehaviour
 
         while (timer > 0)
         {
-            ItemUI.ShowItemInfo(
+            ItemUI.ShowItemInfo("Žc‚è" +
                 Mathf.CeilToInt(timer) + " •b");
 
             timer -= Time.deltaTime;
@@ -207,7 +207,7 @@ public class FEffectItem : MonoBehaviour
 
         while (timer > 0)
         {
-            ItemUI.ShowItemInfo(
+            ItemUI.ShowItemInfo("Žc‚è" +
                 Mathf.CeilToInt(timer) + " •b");
 
             timer -= Time.deltaTime;
