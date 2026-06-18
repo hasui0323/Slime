@@ -23,11 +23,11 @@ public class FBulletShot : MonoBehaviour
 
         if (player.hasBullet)
         {
-            ItemUI.ShowItemInfo(player.BulletCount + " 回");
+            ItemUI.ShowItemInfo("残り" + player.BulletCount + " 回");
         }
         else if (player.hasHammer)
         {
-            ItemUI.ShowItemInfo(player.HammerCount + " 回");
+            ItemUI.ShowItemInfo("残り" + player.HammerCount + " 回");
         }
 
         Debug.Log(ItemUI);
@@ -46,7 +46,7 @@ public class FBulletShot : MonoBehaviour
 
                 player.BulletCount--;
 
-                ItemUI.ShowItemInfo(player.BulletCount + " 回");
+                ItemUI.ShowItemInfo("残り" + player.BulletCount + " 回");
 
                 if (player.BulletCount <= 0)
                 {
@@ -66,7 +66,7 @@ public class FBulletShot : MonoBehaviour
 
                 player.HammerCount--;
 
-                ItemUI.ShowItemInfo(player.HammerCount + " 回");
+                ItemUI.ShowItemInfo("残り" + player.HammerCount + " 回");
 
                 if (player.HammerCount <= 0)
                 {

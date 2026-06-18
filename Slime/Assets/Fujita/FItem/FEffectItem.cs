@@ -21,19 +21,19 @@ public class FEffectItem : MonoBehaviour
         ItemUI = FindFirstObjectByType<HItemUI>();
 
         if (player.hasHeart)
-            ItemUI.ShowItemInfo(player.HeartCount + " ‰ñ");
+            ItemUI.ShowItemInfo("Žc‚è" + player.HeartCount + " ‰ñ");
 
         else if (player.hasHeaven)
-            ItemUI.ShowItemInfo(player.HeavenCount + " ‰ñ");
+            ItemUI.ShowItemInfo("Žc‚è" + player.HeavenCount + " ‰ñ");
 
         else if (player.hasNoSkill)
-            ItemUI.ShowItemInfo(player.NoSkillCount + " ‰ñ");
+            ItemUI.ShowItemInfo("Žc‚è" + player.NoSkillCount + " ‰ñ");
 
         else if (player.hasInvincibl)
-            ItemUI.ShowItemInfo(InvinciblTime + " •b");
+            ItemUI.ShowItemInfo("Žc‚è" + InvinciblTime + " •b");
 
         else if (player.hasTimeReset)
-            ItemUI.ShowItemInfo( RemoveCoolTime + " •b");
+            ItemUI.ShowItemInfo("Žc‚è" + RemoveCoolTime + " •b");
     }
 
     // Update is called once per frame
@@ -48,7 +48,7 @@ public class FEffectItem : MonoBehaviour
 
                 player.NoSkillCount--;
 
-                ItemUI.ShowItemInfo(player.NoSkillCount + " ‰ñ");
+                ItemUI.ShowItemInfo("Žc‚è" + player.NoSkillCount + " ‰ñ");
 
                 if (player.NoSkillCount <= 0)
                 {
@@ -70,7 +70,7 @@ public class FEffectItem : MonoBehaviour
 
                 player.HeartCount--;
 
-                ItemUI.ShowItemInfo(player.HeartCount + " ‰ñ");
+                ItemUI.ShowItemInfo("Žc‚è" + player.HeartCount + " ‰ñ");
 
                 if (player.HeartCount <= 0)
                 {
@@ -127,7 +127,7 @@ public class FEffectItem : MonoBehaviour
 
                 player.HeavenCount--;
 
-                ItemUI.ShowItemInfo(player.HeavenCount + " ‰ñ");
+                ItemUI.ShowItemInfo("Žc‚è" + player.HeavenCount + " ‰ñ");
 
                 if (player.HeavenCount <= 0)
                 {

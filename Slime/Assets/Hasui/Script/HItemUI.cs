@@ -30,39 +30,39 @@ public class HItemUI : MonoBehaviour
             switch (item)
             {
                 case ItemType.Bullet:
-                    ShowItemInfo("3 ‰ñ");
+                    ShowItemInfo("Žc‚è 1 ‰ñ");
                     break;
 
                 case ItemType.Hammer:
-                    ShowItemInfo("1 ‰ñ");
+                    ShowItemInfo("Žc‚è 1 ‰ñ");
                     break;
 
                 case ItemType.Heart:
-                    ShowItemInfo("1 ‰ñ");
+                    ShowItemInfo("Žc‚è 1 ‰ñ");
                     break;
 
                 case ItemType.Heaven:
-                    ShowItemInfo("1 ‰ñ");
+                    ShowItemInfo("Žc‚è 1 ‰ñ");
                     break;
 
                 case ItemType.Invincibl:
-                    ShowItemInfo("3 •b");
+                    ShowItemInfo("Žc‚è 3 •b");
                     break;
 
                 case ItemType.Jump:
-                    ShowItemInfo("1 ‰ñ");
+                    ShowItemInfo("Žc‚è 1 ‰ñ");
                     break;
 
                 case ItemType.NoSkill:
-                    ShowItemInfo("1 ‰ñ");
+                    ShowItemInfo("Žc‚è 1 ‰ñ");
                     break;
 
                 case ItemType.Shoes:
-                    ShowItemInfo("3 •b");
+                    ShowItemInfo("Žc‚è 3 •b");
                     break;
 
                 case ItemType.TimeReset:
-                    ShowItemInfo("10 •b");
+                    ShowItemInfo("Žc‚è 10 •b");
                     break;
             }
         }
