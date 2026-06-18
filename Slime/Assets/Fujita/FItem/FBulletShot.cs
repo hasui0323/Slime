@@ -87,6 +87,9 @@ public class FBulletShot : MonoBehaviour
                         shotPos.position,
                         Quaternion.identity);
 
+        //5ïbå„Ç…è¡Ç¶ÇÈ
+        Destroy(bullet, 2.0f);
+
         //å¸Ç´îªíË
         float dir = Mathf.Sign(transform.localScale.x);
 
@@ -117,6 +120,9 @@ public class FBulletShot : MonoBehaviour
             Instantiate(hammerPrefab,
                         shotPos.position + new Vector3(0, 0.5f, 0),
                         Quaternion.identity);
+
+        //5ïbå„Ç…è¡Ç¶ÇÈ
+        Destroy(hammer, 2.0f);
 
         //å¸Ç´îªíË
         float dir = Mathf.Sign(transform.localScale.x);

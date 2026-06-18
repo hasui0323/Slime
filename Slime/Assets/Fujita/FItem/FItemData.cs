@@ -138,7 +138,7 @@ public class FItemData : MonoBehaviour
             if (type==ItemType.Bullet)
             {
                 player.hasBullet = true;
-                player.BulletCount = 3;
+                player.BulletCount = 1;
             }
             //ÉnÉìÉ}Å[
             if (type == ItemType.Hammer)
