@@ -239,7 +239,7 @@ MonoBehaviour:
   hasBullet: 0
   hasHammer: 0
   hasHeart: 0
-  hasHeaven: 1
+  hasHeaven: 0
   hasInvincibl: 0
   hasJump: 0
   hasNoSkill: 0
