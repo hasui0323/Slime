@@ -103,12 +103,12 @@ TextureImporter:
       name: Hammer_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 344
-        height: 480
+        x: 8
+        y: 15
+        width: 324
+        height: 462
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c63db1ec2ee5290488f79013a40a4b11
     internalID: 0
     vertices: []
     indices: 
