@@ -5785,11 +5785,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1389338158 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6252714406311079213, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
-  m_PrefabInstance: {fileID: 2031269623}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1458864123
 GameObject:
   m_ObjectHideFlags: 0
@@ -7064,27 +7059,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
   m_PrefabInstance: {fileID: 2031269623}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389338158}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eabe00bf2ccbd6346b34fc0d9034cab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FPlayerController
---- !u!114 &1759691345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389338158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 205cdbe15c9c8e64183e0e6e5bbc7e24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HPlayerDeadImage
-  targetImage: {fileID: 1117748949}
-  normalSprite: {fileID: -1571218341048295798, guid: 5e63154b4a13a254b9234e25142bf5f5, type: 3}
-  deadSprite: {fileID: 1879511547100271370, guid: ba4a56bc8706e6c48b36bf8b8b9c8651, type: 3}
 --- !u!1001 &1779386754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8216,22 +8196,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3943235881810244727, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
+      propertyPath: targetImage
+      value: 
+      objectReference: {fileID: 1117748949}
     - target: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
-      propertyPath: life
+      propertyPath: hasHeaven
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
-      propertyPath: hasJump
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: playerDead
       value: 
       objectReference: {fileID: 494855544}
-    - target: {fileID: 4650623998783984874, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
-      propertyPath: InvinciblTime
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6252714406311079213, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: m_Name
       value: MainSlime
@@ -8247,10 +8223,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6252714406311079213, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1759691345}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
 --- !u!1 &2047036461
 GameObject:

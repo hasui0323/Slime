@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 9122026633957175649}
   - component: {fileID: 8346260938899036140}
   - component: {fileID: 4650623998783984874}
+  - component: {fileID: 3943235881810244727}
   m_Layer: 0
   m_Name: MainSlime
   m_TagString: Player
@@ -87,7 +88,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8958688048394906642, guid: 864fbdecb4c326c4d8467c5dd3f908d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -238,7 +239,7 @@ MonoBehaviour:
   hasBullet: 0
   hasHammer: 0
   hasHeart: 0
-  hasHeaven: 0
+  hasHeaven: 1
   hasInvincibl: 0
   hasJump: 0
   hasNoSkill: 0
@@ -332,3 +333,18 @@ MonoBehaviour:
   InvinciblTime: 3
   RemoveCoolTime: 10
   ItemUI: {fileID: 0}
+--- !u!114 &3943235881810244727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6252714406311079213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205cdbe15c9c8e64183e0e6e5bbc7e24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HPlayerDeadImage
+  targetImage: {fileID: 0}
+  normalSprite: {fileID: -1571218341048295798, guid: 5e63154b4a13a254b9234e25142bf5f5, type: 3}
+  deadSprite: {fileID: 1879511547100271370, guid: ba4a56bc8706e6c48b36bf8b8b9c8651, type: 3}

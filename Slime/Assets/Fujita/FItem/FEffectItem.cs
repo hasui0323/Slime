@@ -112,18 +112,22 @@ public class FEffectItem : MonoBehaviour
             //Xキーで発射
             if (Input.GetKeyDown(KeyCode.X))
             {
-                if (Random.value < 0.5f)
-                {
-                    // 当たり
-                    player.speed += 4.0f;
-                    Debug.Log("当たり！スピードアップ！");
-                }
-                else
-                {
-                    // ハズレ
-                    Debug.Log("ハズレ！即死！");
-                    player.GameOver();
-                }
+                //if (Random.value < 0.5f)
+                //{
+                //    // 当たり
+                //    player.speed += 4.0f;
+                //    Debug.Log("当たり！スピードアップ！");
+                //}
+                //else
+                //{
+                //    // ハズレ
+                //    Debug.Log("ハズレ！即死！");
+                //    player.GameOver();
+                //}
+
+                // 当たり
+                player.speed += 4.0f;
+                Debug.Log("当たり！スピードアップ！");
 
                 player.HeavenCount--;
 
