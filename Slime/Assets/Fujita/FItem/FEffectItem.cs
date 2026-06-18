@@ -192,7 +192,7 @@ public class FEffectItem : MonoBehaviour
             yield return null;
         }
 
-        ItemUI.ShowItemInfo("0 •b");
+        ItemUI.ShowItemInfo("Žc‚è 0 •b");
 
         yield return new WaitForSeconds(0.3f);
 
@@ -214,7 +214,7 @@ public class FEffectItem : MonoBehaviour
             yield return null;
         }
 
-        ItemUI.ShowItemInfo("0 •b");
+        ItemUI.ShowItemInfo("Žc‚è 0 •b");
 
         yield return new WaitForSeconds(0.3f);
 
