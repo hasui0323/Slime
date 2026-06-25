@@ -8197,6 +8197,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1117748949}
     - target: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
+      propertyPath: hasShoes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: hasBullet
       value: 0
       objectReference: {fileID: 0}
@@ -8211,6 +8215,10 @@ PrefabInstance:
     - target: {fileID: 6252714406311079213, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: m_Name
       value: MainSlime
+      objectReference: {fileID: 0}
+    - target: {fileID: 8346260938899036140, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
+      propertyPath: SpeedUpValue
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9122026633957175649, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: bulletPrefab

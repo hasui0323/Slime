@@ -126,7 +126,7 @@ public class FItemData : MonoBehaviour
                 }
                 else if (randomItem == ItemType.TimeReset)
                 {
-                    ItemUI.ShowItemInfo("残り 10 秒");
+                    ItemUI.ShowItemInfo("残り 5 秒");
                 }
 
                 Debug.Log("ランダム取得：" + randomItem);
