@@ -3526,7 +3526,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.06537421}
+  m_Offset: {x: 0.23334265, y: -0.06537421}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3536,7 +3536,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 17.25, y: 0.47468027}
+  m_Size: {x: 16.783314, y: 0.47468027}
   m_EdgeRadius: 0
 --- !u!212 &818224119
 SpriteRenderer:
@@ -8196,6 +8196,10 @@ PrefabInstance:
       propertyPath: targetImage
       value: 
       objectReference: {fileID: 1117748949}
+    - target: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
+      propertyPath: hasBullet
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: playerDead
       value: 
