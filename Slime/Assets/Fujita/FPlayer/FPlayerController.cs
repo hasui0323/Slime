@@ -406,7 +406,7 @@ public class FPlayerController : MonoBehaviour
         {
             case ItemType.Bullet:
                 hasBullet = true;
-                BulletCount = 3;
+                BulletCount = 1;
                 break;
 
             case ItemType.Hammer:

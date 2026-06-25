@@ -8198,7 +8198,7 @@ PrefabInstance:
       objectReference: {fileID: 1117748949}
     - target: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: hasBullet
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4602713806799006357, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: playerDead
