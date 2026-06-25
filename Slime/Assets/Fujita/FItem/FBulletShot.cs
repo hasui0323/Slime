@@ -36,6 +36,11 @@ public class FBulletShot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (FPlayerController.gameState != "playing")
+        {
+            return;
+        }
+
         //BulletƒAƒCƒeƒ€‚ğ‚Á‚Ä‚¢‚é‚¾‚¯Œ‚‚Ä‚é
         if (player.hasBullet)
         {

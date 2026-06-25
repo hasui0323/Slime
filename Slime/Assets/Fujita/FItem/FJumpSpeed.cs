@@ -37,6 +37,11 @@ public class FJumpSpeed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (FPlayerController.gameState != "playing")
+        {
+            return;
+        }
+
         //JumpƒAƒCƒeƒ€‚ğ‚Á‚Ä‚¢‚é‚¾‚¯”­“®‚Å‚«‚é
         if (player.hasJump)
         {
