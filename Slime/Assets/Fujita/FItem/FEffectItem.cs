@@ -8,9 +8,12 @@ public class FEffectItem : MonoBehaviour
 
     //public float SpeedUpValue = 3.0f; // 増加量
     public float InvinciblTime = 8.0f;  // 無敵持続時間
-    public float RemoveCoolTime = 10.0f;// ダッシュのクールタイムをなくす時間
+    public float RemoveCoolTime = 5.0f;// ダッシュのクールタイムをなくす時間
 
     public HItemUI ItemUI;
+
+    bool isInvincibleRunning = false;
+    bool isTimeResetRunning = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -81,7 +84,7 @@ public class FEffectItem : MonoBehaviour
         }
 
         //Invinciblアイテムを持っている時だけ発動できる
-        if (player.hasInvincibl)
+        if (player.hasInvincibl && !isInvincibleRunning)
         { 
             //Xキーで発射
             if (Input.GetKeyDown(KeyCode.X))
@@ -95,12 +98,6 @@ public class FEffectItem : MonoBehaviour
                 player.InvinciblCount--;
 
                 StartCoroutine(InvincibleTimer());
-
-                if (player.InvinciblCount <= 0)
-                {
-                    player.hasInvincibl = false;
-                    //ItemUI.ClearItem();
-                }
 
                 Debug.Log("無敵発動！");
             }
@@ -142,7 +139,7 @@ public class FEffectItem : MonoBehaviour
         }
 
         //TimeResetアイテムを持っている時だけ発動できる
-        if (player.hasTimeReset)
+        if (player.hasTimeReset && !isTimeResetRunning)
         {
             //Xキーで発射
             if (Input.GetKeyDown(KeyCode.X))
@@ -156,12 +153,6 @@ public class FEffectItem : MonoBehaviour
                 player.TimeResetCount--;
 
                 StartCoroutine(TimeResetTimer());
-
-                if (player.TimeResetCount <= 0)
-                {
-                    player.hasTimeReset = false;
-                    //ItemUI.ClearItem();
-                }
 
                 Debug.Log("ダッシュクールタイム短縮！");
             }
@@ -185,6 +176,8 @@ public class FEffectItem : MonoBehaviour
 
     IEnumerator InvincibleTimer()
     {
+        isInvincibleRunning = true;
+
         float timer = InvinciblTime;
 
         while (timer > 0)
@@ -203,10 +196,17 @@ public class FEffectItem : MonoBehaviour
         ItemUI.ClearItem();
 
         EndInvincible();
+
+        player.hasInvincibl = false;
+        player.InvinciblCount = 0;
+
+        isInvincibleRunning = false;
     }
 
     IEnumerator TimeResetTimer()
     {
+        isTimeResetRunning = true;
+
         float timer = RemoveCoolTime;
 
         while (timer > 0)
@@ -225,5 +225,10 @@ public class FEffectItem : MonoBehaviour
         ItemUI.ClearItem();
 
         EndTimeReset();
+
+        player.hasTimeReset = false;
+        player.TimeResetCount = 0;
+
+        isTimeResetRunning = false;
     }
 }

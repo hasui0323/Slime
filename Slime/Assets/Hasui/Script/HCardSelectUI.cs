@@ -190,7 +190,7 @@ public class HCardSelectUI : MonoBehaviour
                 return "足が速くなる\n(3秒)";
 
             case ItemType.TimeReset:
-                return "Cキーのダッシュのクールタイムが\n0秒になる(10秒)";
+                return "Cキーのダッシュのクールタイムが\n0秒になる(5秒)";
 
             default:
                 return "";

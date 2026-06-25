@@ -217,15 +217,15 @@ public class FItemData : MonoBehaviour
             }
             else if (type == ItemType.Invincibl)
             {
-                ItemUI.ShowItemInfo("Œø‰ÊŽžŠÔ 8 •b");
+                ItemUI.ShowItemInfo("Œø‰ÊŽžŠÔ 3 •b");
             }
             else if (type == ItemType.Shoes)
             {
-                ItemUI.ShowItemInfo("Œø‰ÊŽžŠÔ 8 •b");
+                ItemUI.ShowItemInfo("Œø‰ÊŽžŠÔ 3 •b");
             }
             else if (type == ItemType.TimeReset)
             {
-                ItemUI.ShowItemInfo("Œø‰ÊŽžŠÔ 10 •b");
+                ItemUI.ShowItemInfo("Œø‰ÊŽžŠÔ 5 •b");
             }
 
             //----------------------------------------------------

@@ -62,7 +62,7 @@ public class HItemUI : MonoBehaviour
                     break;
 
                 case ItemType.TimeReset:
-                    ShowItemInfo("Žc‚è 10 •b");
+                    ShowItemInfo("Žc‚è 5 •b");
                     break;
             }
         }

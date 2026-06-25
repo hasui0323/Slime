@@ -151,7 +151,7 @@ public class HPreviewManager : MonoBehaviour
             //テキストサイズ変更
             previewText2.fontSize = 70;
             previewText1.text = "";
-            previewText2.text = "Cキーのダッシュのクールタイムが\n0秒になる(10秒)";
+            previewText2.text = "Cキーのダッシュのクールタイムが\n0秒になる(5秒)";
 
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage4.color = new Color(1, 1, 1, 1);

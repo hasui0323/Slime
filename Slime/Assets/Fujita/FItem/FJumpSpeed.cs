@@ -58,7 +58,7 @@ public class FJumpSpeed : MonoBehaviour
         }
 
         //Shoesアイテムを持っている時だけ発動できる
-        if (player.hasShoes)
+        if (player.hasShoes && !isSpeedUp)
         {
             //Xキーで発射
             if (Input.GetKeyDown(KeyCode.X))
@@ -68,12 +68,6 @@ public class FJumpSpeed : MonoBehaviour
                 player.ShoesCount--;
 
                 StartCoroutine(ShoesSpeed());
-
-                if (player.ShoesCount <= 0)
-                {
-                    player.hasShoes = false;
-                    //ItemUI.ClearItem();
-                }
             }
         }
 
@@ -108,14 +102,16 @@ public class FJumpSpeed : MonoBehaviour
 
         player.speed -= SpeedUpValue;
 
+        
+
+        player.hasShoes = false;
+        player.ShoesCount = 0;
+
         isSpeedUp = false;
 
         ItemUI.ClearItem();
 
-        if (player.hasShoes)
-        {
-            ItemUI.ShowItemInfo("残り " + SpeedUpTime + " 秒");
-        }
+       
     }
 
 }
