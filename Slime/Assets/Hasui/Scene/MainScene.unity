@@ -856,7 +856,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6B8B\u308A 3 \u56DE"
+  m_Text: "\u6B8B\u308A 1 \u56DE"
 --- !u!222 &148423670
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8184,6 +8184,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2285901011331623620, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2871131625910819231, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.8
