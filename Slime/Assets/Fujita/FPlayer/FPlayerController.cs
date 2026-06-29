@@ -333,6 +333,13 @@ public class FPlayerController : MonoBehaviour
         playerDead.Dead();
 
         gameState = "gameover";
+
+        //プレイヤーと敵の衝突を無効化
+        Physics2D.IgnoreLayerCollision(
+            LayerMask.NameToLayer("Player"),
+            LayerMask.NameToLayer("Enemy"),
+            true);
+
         GameStop(); //ゲーム停止
         ////----------------------------
         ////ゲームオーバー演出
