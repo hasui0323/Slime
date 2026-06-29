@@ -334,7 +334,8 @@ public class FPlayerController : MonoBehaviour
 
         gameState = "gameover";
 
-        GetComponent<CapsuleCollider2D>().enabled = false;
+        GetComponent<CircleCollider2D>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
 
         GameStop(); //ÉQÅ[ÉÄí‚é~
         ////----------------------------
