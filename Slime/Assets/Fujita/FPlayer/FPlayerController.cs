@@ -333,10 +333,6 @@ public class FPlayerController : MonoBehaviour
         playerDead.Dead();
 
         gameState = "gameover";
-
-        GetComponent<CircleCollider2D>().enabled = false;
-        GetComponent<BoxCollider2D>().enabled = false;
-
         GameStop(); //ゲーム停止
         ////----------------------------
         ////ゲームオーバー演出
