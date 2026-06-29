@@ -8248,6 +8248,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainSlime
       objectReference: {fileID: 0}
+    - target: {fileID: 6252714406311079213, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8346260938899036140, guid: 589e78ef209b7e748a235f8930be8e1e, type: 3}
       propertyPath: SpeedUpValue
       value: 6
