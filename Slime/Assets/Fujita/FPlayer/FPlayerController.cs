@@ -336,7 +336,7 @@ public class FPlayerController : MonoBehaviour
 
         //ƒvƒŒƒCƒ„[‚Æ“G‚ÌÕ“Ë‚ğ–³Œø‰»
         Physics2D.IgnoreLayerCollision(
-            LayerMask.NameToLayer("Player"),
+            LayerMask.NameToLayer("Default"),
             LayerMask.NameToLayer("Enemy"),
             true);
 
