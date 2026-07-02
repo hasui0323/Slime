@@ -59,12 +59,8 @@ public class FBulletShot : MonoBehaviour
                     ItemUI.ClearItem();
                 }
 
-                Debug.Log("ShotëO");
-                Debug.Log(FSoundManager.soundManager);
-
                 //SEçƒê∂(Shot)
                 FSoundManager.soundManager.SEPlay(SEType.Shot);
-                Debug.Log("Shotå„");
             }
         }
 
@@ -86,6 +82,9 @@ public class FBulletShot : MonoBehaviour
 
                     ItemUI.ClearItem();
                 }
+
+                //SEçƒê∂(Shot)
+                FSoundManager.soundManager.SEPlay(SEType.Shot);
             }
         }
     }

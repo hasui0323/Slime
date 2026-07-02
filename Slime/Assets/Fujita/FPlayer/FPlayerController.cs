@@ -154,6 +154,9 @@ public class FPlayerController : MonoBehaviour
             Dash();
 
             Debug.Log("aaa");
+
+            //SE再生(Dash)
+            FSoundManager.soundManager.SEPlay(SEType.Dash);
         }
 
         //アイテム所持時の動き--------------------------------------------------------
@@ -313,14 +316,23 @@ public class FPlayerController : MonoBehaviour
         if(collision.gameObject.tag=="Goal")
         {
             Goal();     //ゴール！！
+
+            //SE再生(GameClear)
+            FSoundManager.soundManager.SEPlay(SEType.GameClear);
         }
         else if(collision.gameObject.tag=="Dead")
         {
             GameOver(); //ゲームオーバー
+
+            //SE再生(GameOver)
+            FSoundManager.soundManager.SEPlay(SEType.GameOver);
         }
         else if (collision.gameObject.tag == "Enemy")
         {
             Damage(1, collision.transform.position);//ダメージの大きさ
+
+            //SE再生(Damege)
+            FSoundManager.soundManager.SEPlay(SEType.Damage);
         }
     }
     //ゴール

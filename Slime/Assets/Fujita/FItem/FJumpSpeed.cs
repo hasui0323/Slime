@@ -59,6 +59,9 @@ public class FJumpSpeed : MonoBehaviour
                     player.hasJump = false;
                     ItemUI.ClearItem();
                 }
+
+                //SEçƒê∂(Buff)
+                FSoundManager.soundManager.SEPlay(SEType.Buff);
             }
         }
 
@@ -73,6 +76,9 @@ public class FJumpSpeed : MonoBehaviour
                 player.ShoesCount--;
 
                 StartCoroutine(ShoesSpeed());
+
+                //SEçƒê∂(Buff)
+                FSoundManager.soundManager.SEPlay(SEType.Buff);
             }
         }
 

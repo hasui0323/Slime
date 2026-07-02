@@ -64,6 +64,9 @@ public class FEffectItem : MonoBehaviour
 
                     ItemUI.ClearItem();
                 }
+
+                //SE再生(Buff)
+                FSoundManager.soundManager.SEPlay(SEType.Buff);
             }
         }
 
@@ -85,12 +88,15 @@ public class FEffectItem : MonoBehaviour
                     player.hasHeart = false;
                     ItemUI.ClearItem();
                 }
+
+                //SE再生(Buff)
+                FSoundManager.soundManager.SEPlay(SEType.Buff);
             }
         }
 
         //Invinciblアイテムを持っている時だけ発動できる
         if (player.hasInvincibl && !isInvincibleRunning)
-        { 
+        {
             //Xキーで発射
             if (Input.GetKeyDown(KeyCode.X))
             {
@@ -105,6 +111,10 @@ public class FEffectItem : MonoBehaviour
                 StartCoroutine(InvincibleTimer());
 
                 Debug.Log("無敵発動！");
+
+
+                //SE再生(Buff)
+                FSoundManager.soundManager.SEPlay(SEType.Buff);
             }
         }
 
@@ -136,6 +146,9 @@ public class FEffectItem : MonoBehaviour
                     player.hasHeaven = false;
                     ItemUI.ClearItem();
                 }
+
+                //SE再生(Buff)
+                FSoundManager.soundManager.SEPlay(SEType.Buff);
             }
         }
 
@@ -156,6 +169,9 @@ public class FEffectItem : MonoBehaviour
                 StartCoroutine(TimeResetTimer());
 
                 Debug.Log("ダッシュクールタイム短縮！");
+
+                //SE再生(Buff)
+                FSoundManager.soundManager.SEPlay(SEType.Buff);
             }
         }
 
