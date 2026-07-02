@@ -123,6 +123,7 @@ public class TimerManager : MonoBehaviour
         StartCoroutine(LoadResultScene());
     }
 
+    //­‚µŠÔ‚ğ‚¨‚¢‚Ä‚©‚çƒV[ƒ“ˆÚ“®
     IEnumerator LoadResultScene()
     {
         yield return new WaitForSeconds(3f);

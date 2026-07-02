@@ -79,6 +79,7 @@ public class HPreviewManager : MonoBehaviour
     {
         GameObject current = EventSystem.current.currentSelectedGameObject;
 
+        //靴の効果説明表示と選択中のUI表示
         if (current == Button1)
         {
             previewImage1.sprite = Sprite1;
@@ -105,6 +106,7 @@ public class HPreviewManager : MonoBehaviour
             previewImage2.color = new Color(1, 1, 1, 1);
 
         }
+        //ジャンプの効果説明表示と選択中のUI表示
         else if (current == Button2)
         {
             previewImage1.sprite = Sprite1;
@@ -131,6 +133,7 @@ public class HPreviewManager : MonoBehaviour
             previewImage3.color = new Color(1, 1, 1, 1);
 
         }
+        //ダッシュの効果説明表示と選択中のUI表示
         else if (current == Button3)
         {
             previewImage1.sprite = Sprite1;
@@ -156,6 +159,7 @@ public class HPreviewManager : MonoBehaviour
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage4.color = new Color(1, 1, 1, 1);
         }
+        //弾の効果説明表示と選択中のUI表示
         else if (current == Button4)
         {
             previewImage11.sprite = Sprite11;
@@ -181,6 +185,7 @@ public class HPreviewManager : MonoBehaviour
             previewImage11.color = new Color(1, 1, 1, 1);
             previewImage5.color = new Color(1, 1, 1, 1);
         }
+        //ハンマーの効果説明表示と選択中のUI表示
         else if (current == Button5)
         {
             previewImage11.sprite = Sprite11;
@@ -206,6 +211,7 @@ public class HPreviewManager : MonoBehaviour
             previewImage11.color = new Color(1, 1, 1, 1);
             previewImage6.color = new Color(1, 1, 1, 1);
         }
+        //ハートの効果説明表示と選択中のUI表示
         else if (current == Button6)
         {
             previewImage1.sprite = Sprite1;
@@ -231,6 +237,7 @@ public class HPreviewManager : MonoBehaviour
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage7.color = new Color(1, 1, 1, 1);
         }
+        //無敵の効果説明表示と選択中のUI表示
         else if (current == Button7)
         {
             previewImage1.sprite = Sprite1;
@@ -256,6 +263,7 @@ public class HPreviewManager : MonoBehaviour
             previewImage1.color = new Color(1, 1, 1, 1);
             previewImage8.color = new Color(1, 1, 1, 1);
         }
+        //天国と地獄の効果説明表示と選択中のUI表示
         else if (current == Button8)
         {
             previewImage11.sprite = Sprite11;
@@ -281,6 +289,7 @@ public class HPreviewManager : MonoBehaviour
             previewImage11.color = new Color(1, 1, 1, 1);
             previewImage9.color = new Color(1, 1, 1, 1);
         }
+        //スキルなしの効果説明表示と選択中のUI表示
         else if (current == Button9)
         {
             previewImage10.sprite = Sprite10;

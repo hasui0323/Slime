@@ -57,7 +57,7 @@ public class HResultTime : MonoBehaviour
             //NewRecordTextを虹色にする
             NewrecordText.color = Color.HSVToRGB(Time.time % 1, 1, 1);
 
-            //NewRecordTextを拡大・縮小
+            //NewRecordTextの拡大・縮小を繰り返す
             NewrecordText.transform.localScale = Vector3.one * (1 + Mathf.Sin(Time.time * 5) * 0.2f);
         }
     }
@@ -94,11 +94,13 @@ public class HResultTime : MonoBehaviour
 
     string FormatTime(float time)
     {
+        //タイムがない場所のテキスト
         if (time >= 9999f)
         {
             return "--:--";
         }
 
+        //タイムを分・秒・ミリ単位で表示する用
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time % 60);
         int milliseconds = Mathf.FloorToInt((time % 1) * 100);
