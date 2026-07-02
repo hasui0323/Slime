@@ -53,6 +53,7 @@ MonoBehaviour:
   seGameBuff: {fileID: 8300000, guid: 71a32d176eb3e8d489f1d54c85988a42, type: 3}
   seGameDamage: {fileID: 8300000, guid: 30758b7ddb24e6d408631926b1763ea9, type: 3}
   seGameDash: {fileID: 8300000, guid: b5ad3cd3f94aaa5489e995de772dd51c, type: 3}
+  seGameBreak: {fileID: 8300000, guid: b822faba9b3412843b9b208faff0d01a, type: 3}
   seSelect: {fileID: 8300000, guid: c668fbd686f72484f8728371cbdc2d16, type: 3}
   seDecision: {fileID: 8300000, guid: b9c69489c1892a144b192e7dd014850d, type: 3}
   seCancel: {fileID: 8300000, guid: 8c21de62e291bc74bbadd0003435ba28, type: 3}

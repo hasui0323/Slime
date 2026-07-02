@@ -25,6 +25,9 @@ public class FBreakBlock : MonoBehaviour
 
             //ƒuƒƒbƒN‚ğ‰ó‚·
             Destroy(gameObject);
+
+            //SEÄ¶(Break)
+            FSoundManager.soundManager.SEPlay(SEType.Break);
         }
     }
 }

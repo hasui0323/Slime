@@ -6,7 +6,7 @@ public class FOpSceneBGM : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (SceneManager.GetActiveScene().name == "OperationScene")
+        if (SceneManager.GetActiveScene().name == "OperationScene2")
         {
             //カードシーンBGM再生
             FSoundManager.soundManager.PlayBgm(BGMType.CardSelect);
