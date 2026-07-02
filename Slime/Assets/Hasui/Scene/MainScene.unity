@@ -6420,7 +6420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 4.48, y: 6.32}
+  m_EffectDistance: {x: 4.56, y: 4.16}
   m_UseGraphicAlpha: 1
 --- !u!1 &1631289601
 GameObject:
@@ -8083,7 +8083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 4.29, y: 6.87}
+  m_EffectDistance: {x: 4.43, y: 4.37}
   m_UseGraphicAlpha: 1
 --- !u!1 &1850316045
 GameObject:
