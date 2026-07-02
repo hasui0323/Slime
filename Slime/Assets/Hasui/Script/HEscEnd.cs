@@ -6,17 +6,17 @@ public class HEscEnd : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Escキーが押されたら
+        //Escキーが押されたら
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // ゲームを終了
+            //ゲームを終了
             QuitGame();
         }
     }
 
     void QuitGame()
     {
-        // エディタ上では停止
+        //エディタ上では停止
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else

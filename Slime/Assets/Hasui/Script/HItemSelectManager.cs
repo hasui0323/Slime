@@ -27,6 +27,7 @@ public class HItemSelectManager : MonoBehaviour
     {
         randomItems.Clear();
 
+        //アイテムプール
         List<ItemType> itemPool = new List<ItemType>()
         {
             ItemType.Bullet,
@@ -40,6 +41,7 @@ public class HItemSelectManager : MonoBehaviour
             ItemType.TimeReset
         };
 
+        //アイテムを3種類選出
         for (int i = 0; i < 3; i++)
         {
             int rand = Random.Range(0, itemPool.Count);

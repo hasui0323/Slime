@@ -24,15 +24,14 @@ public class HPlayerDead : MonoBehaviour
             FPlayerController player =
                 other.GetComponent<FPlayerController>();
 
-            // ダメージ
-          player.Damage(1, transform.position);
+            //ダメージ
+            player.Damage(1, transform.position);
 
             Debug.Log("残り体力：" + player.life);
 
+            //プレイヤーの体力が0になったらゲーム終了
             if (player.life <= 0)
             {
-                // DeadText.text = "GameOver";
-                // timerManager.Dead();
                 Dead();
             }
         }

@@ -29,6 +29,7 @@ public class HItemUI : MonoBehaviour
 
             switch (item)
             {
+                //アイテムの使用回数と効果時間表示
                 case ItemType.Bullet:
                     ShowItemInfo("残り 1 回");
                     break;
@@ -71,6 +72,7 @@ public class HItemUI : MonoBehaviour
     {
         switch (type)
         {
+            //取得したアイテムに応じてimage変更
             case ItemType.Bullet:
                 itemImage.sprite = bulletSprite;
                 break;

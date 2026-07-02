@@ -22,6 +22,7 @@ public class HHeartUI : MonoBehaviour
 
     void UpdateHeart()
     {
+        //Œ»İ‚Ìc‹@‚É‰‚¶‚Äimage•ÏX
         for (int i = 0; i < hearts.Length; i++)
         {
             if (i < player.life)
