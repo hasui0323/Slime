@@ -3,24 +3,24 @@ using UnityEngine.UI;
 
 public class HPlayerDeadImage : MonoBehaviour
 {
-    // 切り替えたいImage
+    //切り替えたいImage
     public Image targetImage;
 
-    // 通常時の画像
+    //通常時の画像
     public Sprite normalSprite;
 
-    // Dead時の画像
+    //Dead時の画像
     public Sprite deadSprite;
 
     private void Start()
     {
-        // 最初は通常画像
+        //最初は通常時の画像
         targetImage.sprite = normalSprite;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // 相手のタグがDeadなら画像変更
+        //相手のタグがDeadならDead時の画像に変更
         if (collision.CompareTag("Enemy"))
         {
             targetImage.sprite = deadSprite;

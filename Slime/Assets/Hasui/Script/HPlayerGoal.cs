@@ -13,9 +13,9 @@ public class HPlayerGoal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //ゴールした時の処理
         if (other.CompareTag("Player"))
         {
-            //ゴールした時の処理
             //テキスト表示
             GoalText.text = "Goal!";
             //タイム保存

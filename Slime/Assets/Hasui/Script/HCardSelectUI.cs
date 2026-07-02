@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class HCardSelectUI : MonoBehaviour
 {
@@ -32,12 +33,14 @@ public class HCardSelectUI : MonoBehaviour
     {
         manager = HItemSelectManager.Instance;
 
+        //デバック用
         if (manager == null)
         {
             Debug.LogError("HItemSelectManagerが見つかりません");
             return;
         }
 
+        //アイテムをランダムで選出
         manager.CreateRandomItems();
 
         card1Image.sprite = GetSprite(manager.randomItems[0]);
@@ -58,7 +61,8 @@ public class HCardSelectUI : MonoBehaviour
 
     void Update()
     {
-        // 左
+        //アイテムを矢印キーで選択
+        //左
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             selectIndex++;
@@ -71,7 +75,7 @@ public class HCardSelectUI : MonoBehaviour
             UpdateSelect();
         }
 
-        // 右
+        //右
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             selectIndex--;
@@ -84,7 +88,7 @@ public class HCardSelectUI : MonoBehaviour
             UpdateSelect();
         }
 
-        // Zで決定
+        //Zで決定
         if (Input.GetKeyDown(KeyCode.Z))
         {
             manager.SelectItem(selectIndex);
@@ -100,11 +104,12 @@ public class HCardSelectUI : MonoBehaviour
     {
         Color32 selectColor = new Color32(0, 90, 150, 255);
 
-        // 全部白
+        //全部白
         card1Image.color = Color.white;
         card2Image.color = Color.white;
         card3Image.color = Color.white;
 
+        //アイテムを3種類表示
         if (selectIndex == 0)
         {
             card1Image.color = selectColor;
@@ -127,6 +132,7 @@ public class HCardSelectUI : MonoBehaviour
 
     Sprite GetSprite(ItemType item)
     {
+        //ランダムで選ばれたアイテムのSprite表示
         switch (item)
         {
             case ItemType.Bullet:
@@ -163,6 +169,7 @@ public class HCardSelectUI : MonoBehaviour
 
     string GetDescription(ItemType item)
     {
+        //カードの効果説明
         switch (item)
         {
             case ItemType.Bullet:
@@ -175,10 +182,10 @@ public class HCardSelectUI : MonoBehaviour
                 return "残機が増える\n(1機)";
 
             case ItemType.Heaven:
-                return "天国と地獄\n（スタート時のみ出現・\n天国の場合永続で足が速くなる\n・地獄の場合即死）";
+                return "天国と地獄\n（スタート時のみ出現・\n天国の場合永続で\n足が速くなる\n・地獄の場合即死）";
 
             case ItemType.Invincibl:
-                return "敵やダメージオブジェクトに対して無敵\n（オブジェクトをすり抜ける・3秒）";
+                return "敵やダメージオブジェクトに対して無敵\n（オブジェクトを\nすり抜ける・3秒）";
 
             case ItemType.Jump:
                 return "ハイジャンプができる\n(空中でも使用可能・1回)";
@@ -190,7 +197,7 @@ public class HCardSelectUI : MonoBehaviour
                 return "足が速くなる\n(3秒)";
 
             case ItemType.TimeReset:
-                return "Cキーのダッシュのクールタイムが\n0秒になる(5秒)";
+                return "Cキーのダッシュの\nクールタイムが\n0秒になる(5秒)";
 
             default:
                 return "";
