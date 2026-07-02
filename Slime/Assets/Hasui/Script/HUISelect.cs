@@ -7,6 +7,7 @@ public class UISelect : MonoBehaviour
 
     void Update()
     {
+        //UI‚Ì‘I‘ğó‘Ô‚ª‚È‚­‚È‚Á‚½‚Æ‚«Å‰‚Ìƒ{ƒ^ƒ“‚É–ß‚é
         if (EventSystem.current.currentSelectedGameObject == null)
         {
             EventSystem.current.SetSelectedGameObject(firstButton);
