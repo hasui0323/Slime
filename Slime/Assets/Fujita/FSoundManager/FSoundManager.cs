@@ -19,6 +19,7 @@ public enum SEType
     Shot,       //ショット(弾、ハンマー)
     Buff,       //バフ(プレイヤーの効果)
     Damage,     //ダメージ
+    Dash,       //ダッシュ
     //----------------------------------
     //選択SE----------------------------
     Select,     //選択音
@@ -39,6 +40,7 @@ public class FSoundManager : MonoBehaviour
     public AudioClip seGameShot;
     public AudioClip seGameBuff;
     public AudioClip seGameDamage;
+    public AudioClip seGameDash;
     //選択・決定・キャンセル
     public AudioClip seSelect;
     public AudioClip seDecision;
@@ -106,6 +108,8 @@ public class FSoundManager : MonoBehaviour
     //SE再生
     public void SEPlay(SEType type)
     {
+        Debug.Log("SEPlayが呼ばれた");
+
         //ゲームクリアSE・ゲームオーバーSE----------------
         if (type == SEType.GameClear)
         {
@@ -119,6 +123,7 @@ public class FSoundManager : MonoBehaviour
         //アイテム効果音・ダメージ音----------------------
         else if (type == SEType.Shot)
         {
+            Debug.Log("ShotのSEを再生");
             GetComponent<AudioSource>().PlayOneShot(seGameShot);   //弾・ハンマー
         }
         else if (type == SEType.Buff)
@@ -127,7 +132,11 @@ public class FSoundManager : MonoBehaviour
         }
         else if (type == SEType.Damage)
         {
-            GetComponent<AudioSource>().PlayOneShot(seGameDamage);   //ゲームオーバー
+            GetComponent<AudioSource>().PlayOneShot(seGameDamage);   //ダメージ
+        }
+        else if (type == SEType.Dash)
+        {
+            GetComponent<AudioSource>().PlayOneShot(seGameDash);   //ダッシュ
         }
         //------------------------------------------------
         //選択SE------------------------------------------

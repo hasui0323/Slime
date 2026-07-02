@@ -58,6 +58,13 @@ public class FBulletShot : MonoBehaviour
                     player.hasBullet = false;
                     ItemUI.ClearItem();
                 }
+
+                Debug.Log("ShotëO");
+                Debug.Log(FSoundManager.soundManager);
+
+                //SEçƒê∂(Shot)
+                FSoundManager.soundManager.SEPlay(SEType.Shot);
+                Debug.Log("Shotå„");
             }
         }
 

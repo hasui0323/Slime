@@ -110,6 +110,12 @@ public class FPlayerController : MonoBehaviour
             HItemSelectManager.Instance.selectedItem =
                 ItemType.RandomCard;
         }
+
+        //“–‚½‚è”»’è‚Ì‰Šú‰»
+        Physics2D.IgnoreLayerCollision(
+        LayerMask.NameToLayer("Player"),
+        LayerMask.NameToLayer("Enemy"),
+        false);
     }
 
     // Update is called once per frame
