@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f00c4cea2e0e1da4386ac5565b281f8c
+guid: a369f83a6ae0a88418133c4c4dc18963
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2267038984544578424
-    second: Heaven and Hell_0
+      213: -1419012543697211867
+    second: Story2.1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Heaven and Hell_0
+      name: Story2.1_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 15
-        width: 324
-        height: 461
+        x: 0
+        y: 0
+        width: 1774
+        height: 887
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 884124a0e0cd980e0800000000000000
-      internalID: -2267038984544578424
+      spriteID: 52eaa191c97ae4ce0800000000000000
+      internalID: -1419012543697211867
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f5f7aeb02e8657448b2bf4d4cd3cea35
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Heaven and Hell_0: -2267038984544578424
+      Story2.1_0: -1419012543697211867
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
