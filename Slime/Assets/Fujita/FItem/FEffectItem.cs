@@ -81,6 +81,12 @@ public class FEffectItem : MonoBehaviour
 
                 player.HeartCount--;
 
+                //プレイヤーの体力が3より大きくならないようにするための処理
+                if(player.life > 3 )
+                {
+                    player.life = 3;
+                }
+
                 ItemUI.ShowItemInfo("残り " + player.HeartCount + " 回");
 
                 if (player.HeartCount <= 0)
